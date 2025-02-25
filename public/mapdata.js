@@ -1,21 +1,21 @@
-var simplemaps_worldmap_mapdata={
+var simplemaps_worldmap_mapdata = {
   main_settings: {
-   //General settings
+    //General settings
     width: "responsive", //'700' or 'responsive'
     background_color: "#FFFFFF",
     background_transparent: "yes",
     border_color: "#ffffff",
     popups: "detect",
-    
+
     //State defaults
-    state_description: "State description",
+    state_description: "",
     state_color: "#88A4BC",
     state_hover_color: "#3B729F",
     state_url: "http://simplemaps.com",
     border_size: 1.5,
     all_states_inactive: "no",
     all_states_zoomable: "no",
-    
+
     //Location defaults
     location_description: "Location description",
     location_color: "#FF0067",
@@ -30,14 +30,14 @@ var simplemaps_worldmap_mapdata={
     location_hover_border: 2.5,
     all_locations_inactive: "no",
     all_locations_hidden: "no",
-    
+
     //Label defaults
-    label_color: "#d5ddec",
-    label_hover_color: "#d5ddec",
+    label_color: "transparent",
+    label_hover_color: "#000000",
     label_size: "12",
     label_font: "Arial",
     hide_labels: "no",
-   
+
     //Zoom settings
     zoom: "yes",
     back_image: "no",
@@ -49,7 +49,7 @@ var simplemaps_worldmap_mapdata={
     zoom_out_incrementally: "yes",
     zoom_percentage: 0.99,
     zoom_time: 0.5,
-    
+
     //Popup settings
     popup_color: "white",
     popup_opacity: 0.9,
@@ -57,7 +57,7 @@ var simplemaps_worldmap_mapdata={
     popup_corners: 5,
     popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
     popup_nocss: "no",
-    
+
     //Advanced settings
     div: "map",
     auto_load: "yes",
@@ -68,1956 +68,1956 @@ var simplemaps_worldmap_mapdata={
     state_image_url: "",
     state_image_position: "",
     location_image_url: "",
-    manual_zoom: "yes"
+    manual_zoom: "yes",
   },
   state_specific: {
     AF: {
-      name: "Afghanistan"
+      name: "Afghanistan",
     },
     AO: {
-      name: "Angola"
+      name: "Angola",
     },
     AL: {
-      name: "Albania"
+      name: "Albania",
     },
     AE: {
-      name: "United Arab Emirates"
+      name: "United Arab Emirates",
     },
     AR: {
-      name: "Argentina"
+      name: "Argentina",
     },
     AM: {
-      name: "Armenia"
+      name: "Armenia",
     },
     AU: {
-      name: "Australia"
+      name: "Australia",
     },
     AT: {
-      name: "Austria"
+      name: "Austria",
     },
     AZ: {
-      name: "Azerbaijan"
+      name: "Azerbaijan",
     },
     BI: {
-      name: "Burundi"
+      name: "Burundi",
     },
     BE: {
-      name: "Belgium"
+      name: "Belgium",
     },
     BJ: {
-      name: "Benin"
+      name: "Benin",
     },
     BF: {
-      name: "Burkina Faso"
+      name: "Burkina Faso",
     },
     BD: {
-      name: "Bangladesh"
+      name: "Bangladesh",
     },
     BG: {
-      name: "Bulgaria"
+      name: "Bulgaria",
     },
     BH: {
-      name: "Bahrain"
+      name: "Bahrain",
     },
     BA: {
-      name: "Bosnia and Herzegovina"
+      name: "Bosnia and Herzegovina",
     },
     BY: {
-      name: "Belarus"
+      name: "Belarus",
     },
     BZ: {
-      name: "Belize"
+      name: "Belize",
     },
     BO: {
-      name: "Bolivia"
+      name: "Bolivia",
     },
     BR: {
-      name: "Brazil"
+      name: "Brazil",
     },
     BN: {
-      name: "Brunei Darussalam"
+      name: "Brunei Darussalam",
     },
     BT: {
-      name: "Bhutan"
+      name: "Bhutan",
     },
     BW: {
-      name: "Botswana"
+      name: "Botswana",
     },
     CF: {
-      name: "Central African Republic"
+      name: "Central African Republic",
     },
     CA: {
-      name: "Canada"
+      name: "Canada",
     },
     CH: {
-      name: "Switzerland"
+      name: "Switzerland",
     },
     CL: {
-      name: "Chile"
+      name: "Chile",
     },
     CN: {
-      name: "China"
+      name: "China",
     },
     CI: {
-      name: "Côte d'Ivoire"
+      name: "Côte d'Ivoire",
     },
     CM: {
-      name: "Cameroon"
+      name: "Cameroon",
     },
     CD: {
-      name: "Democratic Republic of the Congo"
+      name: "Democratic Republic of the Congo",
     },
     CG: {
-      name: "Republic of Congo"
+      name: "Republic of Congo",
     },
     CO: {
-      name: "Colombia"
+      name: "Colombia",
     },
     CR: {
-      name: "Costa Rica"
+      name: "Costa Rica",
     },
     CU: {
-      name: "Cuba"
+      name: "Cuba",
     },
     CZ: {
-      name: "Czech Republic"
+      name: "Czech Republic",
     },
     DE: {
-      name: "Germany"
+      name: "Germany",
     },
     DJ: {
-      name: "Djibouti"
+      name: "Djibouti",
     },
     DK: {
-      name: "Denmark"
+      name: "Denmark",
     },
     DO: {
-      name: "Dominican Republic"
+      name: "Dominican Republic",
     },
     DZ: {
-      name: "Algeria"
+      name: "Algeria",
     },
     EC: {
-      name: "Ecuador"
+      name: "Ecuador",
     },
     EG: {
-      name: "Egypt"
+      name: "Egypt",
     },
     ER: {
-      name: "Eritrea"
+      name: "Eritrea",
     },
     EE: {
-      name: "Estonia"
+      name: "Estonia",
     },
     ET: {
-      name: "Ethiopia"
+      name: "Ethiopia",
     },
     FI: {
-      name: "Finland"
+      name: "Finland",
     },
     FJ: {
-      name: "Fiji"
+      name: "Fiji",
     },
     GA: {
-      name: "Gabon"
+      name: "Gabon",
     },
     GB: {
-      name: "United Kingdom"
+      name: "United Kingdom",
     },
     GE: {
-      name: "Georgia"
+      name: "Georgia",
     },
     GH: {
-      name: "Ghana"
+      name: "Ghana",
     },
     GN: {
-      name: "Guinea"
+      name: "Guinea",
     },
     GM: {
-      name: "The Gambia"
+      name: "The Gambia",
     },
     GW: {
-      name: "Guinea-Bissau"
+      name: "Guinea-Bissau",
     },
     GQ: {
-      name: "Equatorial Guinea"
+      name: "Equatorial Guinea",
     },
     GR: {
-      name: "Greece"
+      name: "Greece",
     },
     GL: {
-      name: "Greenland"
+      name: "Greenland",
     },
     GT: {
-      name: "Guatemala"
+      name: "Guatemala",
     },
     GY: {
-      name: "Guyana"
+      name: "Guyana",
     },
     HN: {
-      name: "Honduras"
+      name: "Honduras",
     },
     HR: {
-      name: "Croatia"
+      name: "Croatia",
     },
     HT: {
-      name: "Haiti"
+      name: "Haiti",
     },
     HU: {
-      name: "Hungary"
+      name: "Hungary",
     },
     ID: {
-      name: "Indonesia"
+      name: "Indonesia",
     },
     IN: {
-      name: "India"
+      name: "India",
     },
     IE: {
-      name: "Ireland"
+      name: "Ireland",
     },
     IR: {
-      name: "Iran"
+      name: "Iran",
     },
     IQ: {
-      name: "Iraq"
+      name: "Iraq",
     },
     IS: {
-      name: "Iceland"
+      name: "Iceland",
     },
     IL: {
-      name: "Israel"
+      name: "Israel",
     },
     IT: {
-      name: "Italy"
+      name: "Italy",
     },
     JM: {
-      name: "Jamaica"
+      name: "Jamaica",
     },
     JO: {
-      name: "Jordan"
+      name: "Jordan",
     },
     JP: {
-      name: "Japan"
+      name: "Japan",
     },
     KZ: {
-      name: "Kazakhstan"
+      name: "Kazakhstan",
     },
     KE: {
-      name: "Kenya"
+      name: "Kenya",
     },
     KG: {
-      name: "Kyrgyzstan"
+      name: "Kyrgyzstan",
     },
     KH: {
-      name: "Cambodia"
+      name: "Cambodia",
     },
     KR: {
-      name: "South Korea"
+      name: "South Korea",
     },
     XK: {
-      name: "Kosovo"
+      name: "Kosovo",
     },
     KW: {
-      name: "Kuwait"
+      name: "Kuwait",
     },
     LA: {
-      name: "Laos"
+      name: "Laos",
     },
     LB: {
-      name: "Lebanon"
+      name: "Lebanon",
     },
     LR: {
-      name: "Liberia"
+      name: "Liberia",
     },
     LY: {
-      name: "Libya"
+      name: "Libya",
     },
     LK: {
-      name: "Sri Lanka"
+      name: "Sri Lanka",
     },
     LS: {
-      name: "Lesotho"
+      name: "Lesotho",
     },
     LT: {
-      name: "Lithuania"
+      name: "Lithuania",
     },
     LU: {
-      name: "Luxembourg"
+      name: "Luxembourg",
     },
     LV: {
-      name: "Latvia"
+      name: "Latvia",
     },
     MA: {
-      name: "Morocco"
+      name: "Morocco",
     },
     MD: {
-      name: "Moldova"
+      name: "Moldova",
     },
     MG: {
-      name: "Madagascar"
+      name: "Madagascar",
     },
     MX: {
-      name: "Mexico"
+      name: "Mexico",
     },
     MK: {
-      name: "Macedonia"
+      name: "Macedonia",
     },
     ML: {
-      name: "Mali"
+      name: "Mali",
     },
     MM: {
-      name: "Myanmar"
+      name: "Myanmar",
     },
     ME: {
-      name: "Montenegro"
+      name: "Montenegro",
     },
     MN: {
-      name: "Mongolia"
+      name: "Mongolia",
     },
     MZ: {
-      name: "Mozambique"
+      name: "Mozambique",
     },
     MR: {
-      name: "Mauritania"
+      name: "Mauritania",
     },
     MW: {
-      name: "Malawi"
+      name: "Malawi",
     },
     MY: {
-      name: "Malaysia"
+      name: "Malaysia",
     },
     NA: {
-      name: "Namibia"
+      name: "Namibia",
     },
     NE: {
-      name: "Niger"
+      name: "Niger",
     },
     NG: {
-      name: "Nigeria"
+      name: "Nigeria",
     },
     NI: {
-      name: "Nicaragua"
+      name: "Nicaragua",
     },
     NL: {
-      name: "Netherlands"
+      name: "Netherlands",
     },
     NO: {
-      name: "Norway"
+      name: "Norway",
     },
     NP: {
-      name: "Nepal"
+      name: "Nepal",
     },
     NZ: {
-      name: "New Zealand"
+      name: "New Zealand",
     },
     OM: {
-      name: "Oman"
+      name: "Oman",
     },
     PK: {
-      name: "Pakistan"
+      name: "Pakistan",
     },
     PA: {
-      name: "Panama"
+      name: "Panama",
     },
     PE: {
-      name: "Peru"
+      name: "Peru",
     },
     PH: {
-      name: "Philippines"
+      name: "Philippines",
     },
     PG: {
-      name: "Papua New Guinea"
+      name: "Papua New Guinea",
     },
     PL: {
-      name: "Poland"
+      name: "Poland",
     },
     KP: {
-      name: "North Korea"
+      name: "North Korea",
     },
     PT: {
-      name: "Portugal"
+      name: "Portugal",
     },
     PY: {
-      name: "Paraguay"
+      name: "Paraguay",
     },
     PS: {
-      name: "Palestine"
+      name: "Palestine",
     },
     QA: {
-      name: "Qatar"
+      name: "Qatar",
     },
     RO: {
-      name: "Romania"
+      name: "Romania",
     },
     RU: {
-      name: "Russia"
+      name: "Russia",
     },
     RW: {
-      name: "Rwanda"
+      name: "Rwanda",
     },
     EH: {
-      name: "Western Sahara"
+      name: "Western Sahara",
     },
     SA: {
-      name: "Saudi Arabia"
+      name: "Saudi Arabia",
     },
     SD: {
-      name: "Sudan"
+      name: "Sudan",
     },
     SS: {
-      name: "South Sudan"
+      name: "South Sudan",
     },
     SN: {
-      name: "Senegal"
+      name: "Senegal",
     },
     SL: {
-      name: "Sierra Leone"
+      name: "Sierra Leone",
     },
     SV: {
-      name: "El Salvador"
+      name: "El Salvador",
     },
     RS: {
-      name: "Serbia"
+      name: "Serbia",
     },
     SR: {
-      name: "Suriname"
+      name: "Suriname",
     },
     SK: {
-      name: "Slovakia"
+      name: "Slovakia",
     },
     SI: {
-      name: "Slovenia"
+      name: "Slovenia",
     },
     SE: {
-      name: "Sweden"
+      name: "Sweden",
     },
     SZ: {
-      name: "Swaziland"
+      name: "Swaziland",
     },
     SY: {
-      name: "Syria"
+      name: "Syria",
     },
     TD: {
-      name: "Chad"
+      name: "Chad",
     },
     TG: {
-      name: "Togo"
+      name: "Togo",
     },
     TH: {
-      name: "Thailand"
+      name: "Thailand",
     },
     TJ: {
-      name: "Tajikistan"
+      name: "Tajikistan",
     },
     TM: {
-      name: "Turkmenistan"
+      name: "Turkmenistan",
     },
     TL: {
-      name: "Timor-Leste"
+      name: "Timor-Leste",
     },
     TN: {
-      name: "Tunisia"
+      name: "Tunisia",
     },
     TR: {
-      name: "Turkey"
+      name: "Turkey",
     },
     TW: {
-      name: "Taiwan"
+      name: "Taiwan",
     },
     TZ: {
-      name: "Tanzania"
+      name: "Tanzania",
     },
     UG: {
-      name: "Uganda"
+      name: "Uganda",
     },
     UA: {
-      name: "Ukraine"
+      name: "Ukraine",
     },
     UY: {
-      name: "Uruguay"
+      name: "Uruguay",
     },
     US: {
-      name: "United States"
+      name: "United States",
     },
     UZ: {
-      name: "Uzbekistan"
+      name: "Uzbekistan",
     },
     VE: {
-      name: "Venezuela"
+      name: "Venezuela",
     },
     VN: {
-      name: "Vietnam"
+      name: "Vietnam",
     },
     VU: {
-      name: "Vanuatu"
+      name: "Vanuatu",
     },
     YE: {
-      name: "Yemen"
+      name: "Yemen",
     },
     ZA: {
-      name: "South Africa"
+      name: "South Africa",
     },
     ZM: {
-      name: "Zambia"
+      name: "Zambia",
     },
     ZW: {
-      name: "Zimbabwe"
+      name: "Zimbabwe",
     },
     SO: {
-      name: "Somalia"
+      name: "Somalia",
     },
     GF: {
-      name: "France"
+      name: "France",
     },
     FR: {
-      name: "France"
+      name: "France",
     },
     ES: {
-      name: "Spain"
+      name: "Spain",
     },
     AW: {
-      name: "Aruba"
+      name: "Aruba",
     },
     AI: {
-      name: "Anguilla"
+      name: "Anguilla",
     },
     AD: {
-      name: "Andorra"
+      name: "Andorra",
     },
     AG: {
-      name: "Antigua and Barbuda"
+      name: "Antigua and Barbuda",
     },
     BS: {
-      name: "Bahamas"
+      name: "Bahamas",
     },
     BM: {
-      name: "Bermuda"
+      name: "Bermuda",
     },
     BB: {
-      name: "Barbados"
+      name: "Barbados",
     },
     KM: {
-      name: "Comoros"
+      name: "Comoros",
     },
     CV: {
-      name: "Cape Verde"
+      name: "Cape Verde",
     },
     KY: {
-      name: "Cayman Islands"
+      name: "Cayman Islands",
     },
     DM: {
-      name: "Dominica"
+      name: "Dominica",
     },
     FK: {
-      name: "Falkland Islands"
+      name: "Falkland Islands",
     },
     FO: {
-      name: "Faeroe Islands"
+      name: "Faeroe Islands",
     },
     GD: {
-      name: "Grenada"
+      name: "Grenada",
     },
     HK: {
-      name: "Hong Kong"
+      name: "Hong Kong",
     },
     KN: {
-      name: "Saint Kitts and Nevis"
+      name: "Saint Kitts and Nevis",
     },
     LC: {
-      name: "Saint Lucia"
+      name: "Saint Lucia",
     },
     LI: {
-      name: "Liechtenstein"
+      name: "Liechtenstein",
     },
     MF: {
-      name: "Saint Martin (French)"
+      name: "Saint Martin (French)",
     },
     MV: {
-      name: "Maldives"
+      name: "Maldives",
     },
     MT: {
-      name: "Malta"
+      name: "Malta",
     },
     MS: {
-      name: "Montserrat"
+      name: "Montserrat",
     },
     MU: {
-      name: "Mauritius"
+      name: "Mauritius",
     },
     NC: {
-      name: "New Caledonia"
+      name: "New Caledonia",
     },
     NR: {
-      name: "Nauru"
+      name: "Nauru",
     },
     PN: {
-      name: "Pitcairn Islands"
+      name: "Pitcairn Islands",
     },
     PR: {
-      name: "Puerto Rico"
+      name: "Puerto Rico",
     },
     PF: {
-      name: "French Polynesia"
+      name: "French Polynesia",
     },
     SG: {
-      name: "Singapore"
+      name: "Singapore",
     },
     SB: {
-      name: "Solomon Islands"
+      name: "Solomon Islands",
     },
     ST: {
-      name: "São Tomé and Principe"
+      name: "São Tomé and Principe",
     },
     SX: {
-      name: "Saint Martin (Dutch)"
+      name: "Saint Martin (Dutch)",
     },
     SC: {
-      name: "Seychelles"
+      name: "Seychelles",
     },
     TC: {
-      name: "Turks and Caicos Islands"
+      name: "Turks and Caicos Islands",
     },
     TO: {
-      name: "Tonga"
+      name: "Tonga",
     },
     TT: {
-      name: "Trinidad and Tobago"
+      name: "Trinidad and Tobago",
     },
     VC: {
-      name: "Saint Vincent and the Grenadines"
+      name: "Saint Vincent and the Grenadines",
     },
     VG: {
-      name: "British Virgin Islands"
+      name: "British Virgin Islands",
     },
     VI: {
-      name: "United States Virgin Islands"
+      name: "United States Virgin Islands",
     },
     CY: {
-      name: "Cyprus"
+      name: "Cyprus",
     },
     RE: {
-      name: "Reunion (France)"
+      name: "Reunion (France)",
     },
     YT: {
-      name: "Mayotte (France)"
+      name: "Mayotte (France)",
     },
     MQ: {
-      name: "Martinique (France)"
+      name: "Martinique (France)",
     },
     GP: {
-      name: "Guadeloupe (France)"
+      name: "Guadeloupe (France)",
     },
     CW: {
-      name: "Curaco (Netherlands)"
+      name: "Curaco (Netherlands)",
     },
     IC: {
-      name: "Canary Islands (Spain)"
-    }
+      name: "Canary Islands (Spain)",
+    },
   },
   locations: {},
   labels: {
-    "0": {
+    0: {
       name: "Afghanistan",
       parent_id: "AF",
       x: 1342.4,
-      y: 282.8
+      y: 282.8,
     },
-    "1": {
+    1: {
       name: "Angola",
       parent_id: "AO",
       x: 1085.6,
-      y: 589.1
+      y: 589.1,
     },
-    "2": {
+    2: {
       name: "Albania",
       parent_id: "AL",
       x: 1090.3,
-      y: 239.5
+      y: 239.5,
     },
-    "3": {
+    3: {
       name: "United Arab Emirates",
       parent_id: "AE",
       x: 1287.5,
-      y: 351.3
+      y: 351.3,
     },
-    "4": {
+    4: {
       name: "Argentina",
       parent_id: "AR",
       x: 639,
-      y: 698.8
+      y: 698.8,
     },
-    "5": {
+    5: {
       name: "Armenia",
       parent_id: "AM",
       x: 1219.3,
-      y: 241.7
+      y: 241.7,
     },
-    "6": {
+    6: {
       name: "Australia",
       parent_id: "AU",
       x: 1724.5,
-      y: 653.9
+      y: 653.9,
     },
-    "7": {
+    7: {
       name: "Austria",
       parent_id: "AT",
       x: 1059.5,
-      y: 197.2
+      y: 197.2,
     },
-    "8": {
+    8: {
       name: "Azerbaijan",
       parent_id: "AZ",
       x: 1232.7,
-      y: 243.3
+      y: 243.3,
     },
-    "9": {
+    9: {
       name: "Burundi",
       parent_id: "BI",
       x: 1155.7,
-      y: 523.7
+      y: 523.7,
     },
-    "10": {
+    10: {
       name: "Belgium",
       parent_id: "BE",
       x: 1008.8,
-      y: 178
+      y: 178,
     },
-    "11": {
+    11: {
       name: "Benin",
       parent_id: "BJ",
       x: 999.8,
-      y: 433.5
+      y: 433.5,
     },
-    "12": {
+    12: {
       name: "Burkina Faso",
       parent_id: "BF",
       x: 980.3,
-      y: 419.7
+      y: 419.7,
     },
-    "13": {
+    13: {
       name: "Bangladesh",
       parent_id: "BD",
       x: 1483.9,
-      y: 347.5
+      y: 347.5,
     },
-    "14": {
+    14: {
       name: "Bulgaria",
       parent_id: "BG",
       x: 1111,
-      y: 228.3
+      y: 228.3,
     },
-    "15": {
+    15: {
       name: "Bahrain",
       parent_id: "BH",
       x: 1264.5,
-      y: 334.5
+      y: 334.5,
     },
-    "16": {
+    16: {
       name: "Bosnia and Herzegovina",
       parent_id: "BA",
       x: 1078.3,
-      y: 218.6
+      y: 218.6,
     },
-    "17": {
+    17: {
       name: "Belarus",
       parent_id: "BY",
       x: 1121.1,
-      y: 159.6
+      y: 159.6,
     },
-    "18": {
+    18: {
       name: "Belize",
       parent_id: "BZ",
       x: 489.7,
-      y: 393.8
+      y: 393.8,
     },
-    "19": {
+    19: {
       name: "Bolivia",
       parent_id: "BO",
       x: 624.8,
-      y: 610.5
+      y: 610.5,
     },
-    "20": {
+    20: {
       name: "Brazil",
       parent_id: "BR",
       x: 709.8,
-      y: 573.6
+      y: 573.6,
     },
-    "21": {
+    21: {
       name: "Brunei Darussalam",
       parent_id: "BN",
       x: 1637.1,
-      y: 471.7
+      y: 471.7,
     },
-    "22": {
+    22: {
       name: "Bhutan",
       parent_id: "BT",
       x: 1479.3,
-      y: 324.6
+      y: 324.6,
     },
-    "23": {
+    23: {
       name: "Botswana",
       parent_id: "BW",
       x: 1120.9,
-      y: 642.4
+      y: 642.4,
     },
-    "24": {
+    24: {
       name: "Central African Republic",
       parent_id: "CF",
       x: 1109.2,
-      y: 457
+      y: 457,
     },
-    "25": {
+    25: {
       name: "Canada",
       parent_id: "CA",
       x: 455.1,
-      y: 127
+      y: 127,
     },
-    "26": {
+    26: {
       name: "Switzerland",
       parent_id: "CH",
       x: 1024,
-      y: 202.9
+      y: 202.9,
     },
-    "27": {
+    27: {
       name: "Chile",
       parent_id: "CL",
       x: 615.8,
-      y: 794.3
+      y: 794.3,
     },
-    "28": {
+    28: {
       name: "China",
       parent_id: "CN",
       x: 1573.7,
-      y: 297.9
+      y: 297.9,
     },
-    "29": {
+    29: {
       name: "Côte d'Ivoire",
       parent_id: "CI",
       x: 954.8,
-      y: 454.2
+      y: 454.2,
     },
-    "30": {
+    30: {
       name: "Cameroon",
       parent_id: "CM",
       x: 1053.7,
-      y: 472
+      y: 472,
     },
-    "31": {
+    31: {
       name: "Democratic Republic of the Congo",
       parent_id: "CD",
       x: 1118.5,
-      y: 512.7
+      y: 512.7,
     },
-    "32": {
+    32: {
       name: "Republic of Congo",
       parent_id: "CG",
       x: 1075.9,
-      y: 500.7
+      y: 500.7,
     },
-    "33": {
+    33: {
       name: "Colombia",
       parent_id: "CO",
       x: 571.8,
-      y: 478.8
+      y: 478.8,
     },
-    "34": {
+    34: {
       name: "Costa Rica",
       parent_id: "CR",
       x: 512.7,
-      y: 437.4
+      y: 437.4,
     },
-    "35": {
+    35: {
       name: "Cuba",
       parent_id: "CU",
       x: 553.5,
-      y: 364.9
+      y: 364.9,
     },
-    "36": {
+    36: {
       name: "Czech Republic",
       parent_id: "CZ",
       x: 1057,
-      y: 182.6
+      y: 182.6,
     },
-    "37": {
+    37: {
       name: "Germany",
       parent_id: "DE",
       x: 1032.7,
-      y: 174.3
+      y: 174.3,
     },
-    "38": {
+    38: {
       name: "Djibouti",
       parent_id: "DJ",
       x: 1224.6,
-      y: 428.4
+      y: 428.4,
     },
-    "39": {
+    39: {
       name: "Denmark",
       parent_id: "DK",
       x: 1029.1,
-      y: 143.1
+      y: 143.1,
     },
-    "40": {
+    40: {
       name: "Dominican Republic",
       parent_id: "DO",
       x: 591.5,
-      y: 379.2
+      y: 379.2,
     },
-    "41": {
+    41: {
       name: "Algeria",
       parent_id: "DZ",
       x: 1001.1,
-      y: 325.9
+      y: 325.9,
     },
-    "42": {
+    42: {
       name: "Ecuador",
       parent_id: "EC",
       x: 543.1,
-      y: 509.7
+      y: 509.7,
     },
-    "43": {
+    43: {
       name: "Egypt",
       parent_id: "EG",
       x: 1148.2,
-      y: 336.1
+      y: 336.1,
     },
-    "44": {
+    44: {
       name: "Eritrea",
       parent_id: "ER",
       x: 1198.6,
-      y: 399.1
+      y: 399.1,
     },
-    "45": {
+    45: {
       name: "Estonia",
       parent_id: "EE",
       x: 1106.3,
-      y: 129.4
+      y: 129.4,
     },
-    "46": {
+    46: {
       name: "Ethiopia",
       parent_id: "ET",
       x: 1207.9,
-      y: 451.5
+      y: 451.5,
     },
-    "47": {
+    47: {
       name: "Finland",
       parent_id: "FI",
       x: 1100.8,
-      y: 105.3
+      y: 105.3,
     },
-    "48": {
+    48: {
       name: "Fiji",
       parent_id: "FJ",
       x: 1980.9,
-      y: 616
+      y: 616,
     },
-    "49": {
+    49: {
       name: "Gabon",
       parent_id: "GA",
       x: 1049.7,
-      y: 506.3
+      y: 506.3,
     },
-    "50": {
+    50: {
       name: "United Kingdom",
       parent_id: "GB",
       x: 979,
-      y: 168
+      y: 168,
     },
-    "51": {
+    51: {
       name: "Georgia",
       parent_id: "GE",
       x: 1215.5,
-      y: 232.9
+      y: 232.9,
     },
-    "52": {
+    52: {
       name: "Ghana",
       parent_id: "GH",
       x: 979.4,
-      y: 457.3
+      y: 457.3,
     },
-    "53": {
+    53: {
       name: "Guinea",
       parent_id: "GN",
       x: 915.3,
-      y: 430
+      y: 430,
     },
-    "54": {
+    54: {
       name: "The Gambia",
       parent_id: "GM",
       x: 897,
-      y: 415.7
+      y: 415.7,
     },
-    "55": {
+    55: {
       name: "Guinea-Bissau",
       parent_id: "GW",
       x: 900.7,
-      y: 425.2
+      y: 425.2,
     },
-    "56": {
+    56: {
       name: "Equatorial Guinea",
       parent_id: "GQ",
       x: 1044.7,
-      y: 491.3
+      y: 491.3,
     },
-    "57": {
+    57: {
       name: "Greece",
       parent_id: "GR",
       x: 1099.4,
-      y: 248.2
+      y: 248.2,
     },
-    "58": {
+    58: {
       name: "Greenland",
       parent_id: "GL",
       x: 816.9,
-      y: 47.5
+      y: 47.5,
     },
-    "59": {
+    59: {
       name: "Guatemala",
       parent_id: "GT",
       x: 476.3,
-      y: 405.6
+      y: 405.6,
     },
-    "60": {
+    60: {
       name: "Guyana",
       parent_id: "GY",
       x: 652.7,
-      y: 465.4
+      y: 465.4,
     },
-    "61": {
+    61: {
       name: "Honduras",
       parent_id: "HN",
       x: 495.9,
-      y: 407
+      y: 407,
     },
-    "62": {
+    62: {
       name: "Croatia",
       parent_id: "HR",
       x: 1069.6,
-      y: 208.3
+      y: 208.3,
     },
-    "63": {
+    63: {
       name: "Haiti",
       parent_id: "HT",
       x: 583.7,
-      y: 378.2
+      y: 378.2,
     },
-    "64": {
+    64: {
       name: "Hungary",
       parent_id: "HU",
       x: 1088.6,
-      y: 199
+      y: 199,
     },
-    "65": {
+    65: {
       name: "Indonesia",
       parent_id: "ID",
       x: 1633.2,
-      y: 508.4
+      y: 508.4,
     },
-    "66": {
+    66: {
       name: "India",
       parent_id: "IN",
       x: 1426.4,
-      y: 358.8
+      y: 358.8,
     },
-    "67": {
+    67: {
       name: "Ireland",
       parent_id: "IE",
       x: 948.3,
-      y: 163.4
+      y: 163.4,
     },
-    "68": {
+    68: {
       name: "Iran",
       parent_id: "IR",
       x: 1283.2,
-      y: 292
+      y: 292,
     },
-    "69": {
+    69: {
       name: "Iraq",
       parent_id: "IQ",
       x: 1217.4,
-      y: 287.6
+      y: 287.6,
     },
-    "70": {
+    70: {
       name: "Iceland",
       parent_id: "IS",
       x: 904.6,
-      y: 93.7
+      y: 93.7,
     },
-    "71": {
+    71: {
       name: "Israel",
       parent_id: "IL",
       x: 1175.3,
-      y: 303.5
+      y: 303.5,
     },
-    "72": {
+    72: {
       name: "Italy",
       parent_id: "IT",
       x: 1040.2,
-      y: 212.4
+      y: 212.4,
     },
-    "73": {
+    73: {
       name: "Jamaica",
       parent_id: "JM",
       x: 554.7,
-      y: 385.6
+      y: 385.6,
     },
-    "74": {
+    74: {
       name: "Jordan",
       parent_id: "JO",
       x: 1183.4,
-      y: 304.9
+      y: 304.9,
     },
-    "75": {
+    75: {
       name: "Japan",
       parent_id: "JP",
       x: 1724.1,
-      y: 269.3
+      y: 269.3,
     },
-    "76": {
+    76: {
       name: "Kazakhstan",
       parent_id: "KZ",
       x: 1344.1,
-      y: 194.6
+      y: 194.6,
     },
-    "77": {
+    77: {
       name: "Kenya",
       parent_id: "KE",
       x: 1200.3,
-      y: 499.5
+      y: 499.5,
     },
-    "78": {
+    78: {
       name: "Kyrgyzstan",
       parent_id: "KG",
       x: 1373.2,
-      y: 234.9
+      y: 234.9,
     },
-    "79": {
+    79: {
       name: "Cambodia",
       parent_id: "KH",
       x: 1574.3,
-      y: 420.6
+      y: 420.6,
     },
-    "80": {
+    80: {
       name: "South Korea",
       parent_id: "KR",
       x: 1667.3,
-      y: 269.9
+      y: 269.9,
     },
-    "81": {
+    81: {
       name: "Kosovo",
       parent_id: "XK",
       x: 1094.2,
-      y: 228.9
+      y: 228.9,
     },
-    "82": {
+    82: {
       name: "Kuwait",
       parent_id: "KW",
       x: 1246.1,
-      y: 313.1
+      y: 313.1,
     },
-    "83": {
+    83: {
       name: "Laos",
       parent_id: "LA",
       x: 1558.4,
-      y: 376.1
+      y: 376.1,
     },
-    "84": {
+    84: {
       name: "Lebanon",
       parent_id: "LB",
       x: 1180,
-      y: 282.1
+      y: 282.1,
     },
-    "85": {
+    85: {
       name: "Liberia",
       parent_id: "LR",
       x: 932,
-      y: 460.1
+      y: 460.1,
     },
-    "86": {
+    86: {
       name: "Libya",
       parent_id: "LY",
       x: 1096.7,
-      y: 333.3
+      y: 333.3,
     },
-    "87": {
+    87: {
       name: "Sri Lanka",
       parent_id: "LK",
       x: 1443.2,
-      y: 454.9
+      y: 454.9,
     },
-    "88": {
+    88: {
       name: "Lesotho",
       parent_id: "LS",
       x: 1140.3,
-      y: 691.7
+      y: 691.7,
     },
-    "89": {
+    89: {
       name: "Lithuania",
       parent_id: "LT",
       x: 1101.5,
-      y: 151
+      y: 151,
     },
-    "90": {
+    90: {
       name: "Luxembourg",
       parent_id: "LU",
       x: 1015.8,
-      y: 183.5
+      y: 183.5,
     },
-    "91": {
+    91: {
       name: "Latvia",
       parent_id: "LV",
       x: 1110.3,
-      y: 141.4
+      y: 141.4,
     },
-    "92": {
+    92: {
       name: "Morocco",
       parent_id: "MA",
       x: 948.5,
-      y: 298.5
+      y: 298.5,
     },
-    "93": {
+    93: {
       name: "Moldova",
       parent_id: "MD",
       x: 1127.7,
-      y: 196.9
+      y: 196.9,
     },
-    "94": {
+    94: {
       name: "Madagascar",
       parent_id: "MG",
       x: 1246.6,
-      y: 618.2
+      y: 618.2,
     },
-    "95": {
+    95: {
       name: "Mexico",
       parent_id: "MX",
       x: 421.4,
-      y: 346
+      y: 346,
     },
-    "96": {
+    96: {
       name: "Macedonia",
       parent_id: "MK",
       x: 1097.1,
-      y: 235
+      y: 235,
     },
-    "97": {
+    97: {
       name: "Mali",
       parent_id: "ML",
       x: 977.1,
-      y: 383.3
+      y: 383.3,
     },
-    "98": {
+    98: {
       name: "Myanmar",
       parent_id: "MM",
       x: 1520.3,
-      y: 364.2
+      y: 364.2,
     },
-    "99": {
+    99: {
       name: "Montenegro",
       parent_id: "ME",
       x: 1085.1,
-      y: 226.3
+      y: 226.3,
     },
-    "100": {
+    100: {
       name: "Mongolia",
       parent_id: "MN",
       x: 1504.2,
-      y: 204.2
+      y: 204.2,
     },
-    "101": {
+    101: {
       name: "Mozambique",
       parent_id: "MZ",
       x: 1199.9,
-      y: 589.9
+      y: 589.9,
     },
-    "102": {
+    102: {
       name: "Mauritania",
       parent_id: "MR",
       x: 931.7,
-      y: 378.8
+      y: 378.8,
     },
-    "103": {
+    103: {
       name: "Malawi",
       parent_id: "MW",
       x: 1175.4,
-      y: 587.4
+      y: 587.4,
     },
-    "104": {
+    104: {
       name: "Malaysia",
       parent_id: "MY",
       x: 1631.5,
-      y: 485.8
+      y: 485.8,
     },
-    "105": {
+    105: {
       name: "Namibia",
       parent_id: "NA",
       x: 1080.6,
-      y: 632.2
+      y: 632.2,
     },
-    "106": {
+    106: {
       name: "Niger",
       parent_id: "NE",
       x: 1040.8,
-      y: 390.8
+      y: 390.8,
     },
-    "107": {
+    107: {
       name: "Nigeria",
       parent_id: "NG",
       x: 1028.6,
-      y: 439.8
+      y: 439.8,
     },
-    "108": {
+    108: {
       name: "Nicaragua",
       parent_id: "NI",
       x: 506.7,
-      y: 421.6
+      y: 421.6,
     },
-    "109": {
+    109: {
       name: "Netherlands",
       parent_id: "NL",
       x: 1012.9,
-      y: 166.7
+      y: 166.7,
     },
-    "110": {
+    110: {
       name: "Norway",
       parent_id: "NO",
       x: 1023,
-      y: 116
+      y: 116,
     },
-    "111": {
+    111: {
       name: "Nepal",
       parent_id: "NP",
       x: 1430.8,
-      y: 313.4
+      y: 313.4,
     },
-    "112": {
+    112: {
       name: "New Zealand",
       parent_id: "NZ",
       x: 1847.2,
-      y: 790.3
+      y: 790.3,
     },
-    "113": {
+    113: {
       name: "Oman",
       parent_id: "OM",
       x: 1305.7,
-      y: 359.4
+      y: 359.4,
     },
-    "114": {
+    114: {
       name: "Pakistan",
       parent_id: "PK",
       x: 1353.9,
-      y: 324.2
+      y: 324.2,
     },
-    "115": {
+    115: {
       name: "Panama",
       parent_id: "PA",
       x: 528.6,
-      y: 448.3
+      y: 448.3,
     },
-    "116": {
+    116: {
       name: "Peru",
       parent_id: "PE",
       x: 576.1,
-      y: 585.8
+      y: 585.8,
     },
-    "117": {
+    117: {
       name: "Philippines",
       parent_id: "PH",
       x: 1666.1,
-      y: 393.6
+      y: 393.6,
     },
-    "118": {
+    118: {
       name: "Papua New Guinea",
       parent_id: "PG",
       x: 1798.2,
-      y: 538.7
+      y: 538.7,
     },
-    "119": {
+    119: {
       name: "Poland",
       parent_id: "PL",
       x: 1083.5,
-      y: 169.6
+      y: 169.6,
     },
-    "120": {
+    120: {
       name: "North Korea",
       parent_id: "KP",
       x: 1647.7,
-      y: 242.5
+      y: 242.5,
     },
-    "121": {
+    121: {
       name: "Portugal",
       parent_id: "PT",
       x: 942.1,
-      y: 251.2
+      y: 251.2,
     },
-    "122": {
+    122: {
       name: "Paraguay",
       parent_id: "PY",
       x: 652.1,
-      y: 639.5
+      y: 639.5,
     },
-    "123": {
+    123: {
       name: "Palestine",
       parent_id: "PS",
       x: 1177.1,
-      y: 294.6
+      y: 294.6,
     },
-    "124": {
+    124: {
       name: "Qatar",
       parent_id: "QA",
       x: 1268.5,
-      y: 339.3
+      y: 339.3,
     },
-    "125": {
+    125: {
       name: "Romania",
       parent_id: "RO",
       x: 1113.9,
-      y: 208.7
+      y: 208.7,
     },
-    "126": {
+    126: {
       name: "Russia",
       parent_id: "RU",
       x: 1416.2,
-      y: 112.8
+      y: 112.8,
     },
-    "127": {
+    127: {
       name: "Rwanda",
       parent_id: "RW",
       x: 1157.8,
-      y: 513.6
+      y: 513.6,
     },
-    "128": {
+    128: {
       name: "Western Sahara",
       parent_id: "EH",
       x: 910.8,
-      y: 361
+      y: 361,
     },
-    "129": {
+    129: {
       name: "Saudi Arabia",
       parent_id: "SA",
       x: 1233.9,
-      y: 350.1
+      y: 350.1,
     },
-    "130": {
+    130: {
       name: "Sudan",
       parent_id: "SD",
       x: 1154.2,
-      y: 394.2
+      y: 394.2,
     },
-    "131": {
+    131: {
       name: "South Sudan",
       parent_id: "SS",
       x: 1156.8,
-      y: 456.1
+      y: 456.1,
     },
-    "132": {
+    132: {
       name: "Senegal",
       parent_id: "SN",
       x: 903.2,
-      y: 404.3
+      y: 404.3,
     },
-    "133": {
+    133: {
       name: "Sierra Leone",
       parent_id: "SL",
       x: 919.5,
-      y: 447.4
+      y: 447.4,
     },
-    "134": {
+    134: {
       name: "El Salvador",
       parent_id: "SV",
       x: 484.4,
-      y: 412.8
+      y: 412.8,
     },
-    "135": {
+    135: {
       name: "Serbia",
       parent_id: "RS",
       x: 1091.9,
-      y: 218.5
+      y: 218.5,
     },
-    "136": {
+    136: {
       name: "Suriname",
       parent_id: "SR",
       x: 669.3,
-      y: 474.8
+      y: 474.8,
     },
-    "137": {
+    137: {
       name: "Slovakia",
       parent_id: "SK",
       x: 1080.9,
-      y: 189.6
+      y: 189.6,
     },
-    "138": {
+    138: {
       name: "Slovenia",
       parent_id: "SI",
       x: 1062.7,
-      y: 206.1
+      y: 206.1,
     },
-    "139": {
+    139: {
       name: "Sweden",
       parent_id: "SE",
       x: 1064.5,
-      y: 88.8
+      y: 88.8,
     },
-    "140": {
+    140: {
       name: "Swaziland",
       parent_id: "SZ",
       x: 1158.9,
-      y: 671.9
+      y: 671.9,
     },
-    "141": {
+    141: {
       name: "Syria",
       parent_id: "SY",
       x: 1191.7,
-      y: 276.6
+      y: 276.6,
     },
-    "142": {
+    142: {
       name: "Chad",
       parent_id: "TD",
       x: 1095,
-      y: 391.3
+      y: 391.3,
     },
-    "143": {
+    143: {
       name: "Togo",
       parent_id: "TG",
       x: 992.2,
-      y: 443.9
+      y: 443.9,
     },
-    "144": {
+    144: {
       name: "Thailand",
       parent_id: "TH",
       x: 1554.9,
-      y: 402.4
+      y: 402.4,
     },
-    "145": {
+    145: {
       name: "Tajikistan",
       parent_id: "TJ",
       x: 1369.8,
-      y: 256.7
+      y: 256.7,
     },
-    "146": {
+    146: {
       name: "Turkmenistan",
       parent_id: "TM",
       x: 1299.2,
-      y: 249.3
+      y: 249.3,
     },
-    "147": {
+    147: {
       name: "Timor-Leste",
       parent_id: "TL",
       x: 1695.5,
-      y: 559
+      y: 559,
     },
-    "148": {
+    148: {
       name: "Tunisia",
       parent_id: "TN",
       x: 1034.1,
-      y: 284.3
+      y: 284.3,
     },
-    "149": {
+    149: {
       name: "Turkey",
       parent_id: "TR",
       x: 1162.6,
-      y: 250.1
+      y: 250.1,
     },
-    "150": {
+    150: {
       name: "Taiwan",
       parent_id: "TW",
       x: 1655.1,
-      y: 350.1
+      y: 350.1,
     },
-    "151": {
+    151: {
       name: "Tanzania",
       parent_id: "TZ",
       x: 1182,
-      y: 540.1
+      y: 540.1,
     },
-    "152": {
+    152: {
       name: "Uganda",
       parent_id: "UG",
       x: 1173.9,
-      y: 489.5
+      y: 489.5,
     },
-    "153": {
+    153: {
       name: "Ukraine",
       parent_id: "UA",
       x: 1144.8,
-      y: 187.4
+      y: 187.4,
     },
-    "154": {
+    154: {
       name: "Uruguay",
       parent_id: "UY",
       x: 684.6,
-      y: 712.8
+      y: 712.8,
     },
-    "155": {
+    155: {
       name: "United States",
       parent_id: "US",
       x: 455.1,
-      y: 251.2
+      y: 251.2,
     },
-    "156": {
+    156: {
       name: "Uzbekistan",
       parent_id: "UZ",
       x: 1317.2,
-      y: 232.8
+      y: 232.8,
     },
-    "157": {
+    157: {
       name: "Venezuela",
       parent_id: "VE",
       x: 622.3,
-      y: 455.3
+      y: 455.3,
     },
-    "158": {
+    158: {
       name: "Vietnam",
       parent_id: "VN",
       x: 1570.1,
-      y: 361.4
+      y: 361.4,
     },
-    "159": {
+    159: {
       name: "Vanuatu",
       parent_id: "VU",
       x: 1922.8,
-      y: 600.9
+      y: 600.9,
     },
-    "160": {
+    160: {
       name: "Yemen",
       parent_id: "YE",
       x: 1240.2,
-      y: 403.6
+      y: 403.6,
     },
-    "161": {
+    161: {
       name: "South Africa",
       parent_id: "ZA",
       x: 1121,
-      y: 692.8
+      y: 692.8,
     },
-    "162": {
+    162: {
       name: "Zambia",
       parent_id: "ZM",
       x: 1131.9,
-      y: 598.1
+      y: 598.1,
     },
-    "163": {
+    163: {
       name: "Zimbabwe",
       parent_id: "ZW",
       x: 1152.5,
-      y: 623.2
+      y: 623.2,
     },
-    "164": {
+    164: {
       name: "Somalia",
       parent_id: "SO",
       x: 1231.7,
-      y: 484.9
+      y: 484.9,
     },
-    "165": {
+    165: {
       name: "France",
       parent_id: "GF",
       x: 686,
-      y: 475.7
+      y: 475.7,
     },
-    "166": {
+    166: {
       name: "France",
       parent_id: "FR",
       x: 997.6,
-      y: 199.5
+      y: 199.5,
     },
-    "167": {
+    167: {
       name: "Spain",
       parent_id: "ES",
       x: 967.6,
-      y: 247.7
+      y: 247.7,
     },
-    "168": {
+    168: {
       name: "Aruba",
       parent_id: "AW",
       x: 592.3,
-      y: 421.4
+      y: 421.4,
     },
-    "169": {
+    169: {
       name: "Anguilla",
       parent_id: "AI",
       x: 634.3,
-      y: 384.7
+      y: 384.7,
     },
-    "170": {
+    170: {
       name: "Andorra",
-      parent_id: "AD"
+      parent_id: "AD",
     },
-    "171": {
+    171: {
       name: "Antigua and Barbuda",
       parent_id: "AG",
       x: 640.6,
-      y: 392.2
+      y: 392.2,
     },
-    "172": {
+    172: {
       name: "Bahamas",
       parent_id: "BS",
       x: 555.5,
-      y: 343.2
+      y: 343.2,
     },
-    "173": {
+    173: {
       name: "Bermuda",
       parent_id: "BM",
       x: 636.9,
-      y: 294.2
+      y: 294.2,
     },
-    "174": {
+    174: {
       name: "Barbados",
       parent_id: "BB",
       x: 651.3,
-      y: 417.2
+      y: 417.2,
     },
-    "175": {
+    175: {
       name: "Comoros",
       parent_id: "KM",
       x: 1230.7,
-      y: 577
+      y: 577,
     },
-    "176": {
+    176: {
       name: "Cape Verde",
       parent_id: "CV",
       x: 853.7,
-      y: 405
+      y: 405,
     },
-    "177": {
+    177: {
       name: "Cayman Islands",
       parent_id: "KY",
       x: 533.3,
-      y: 377.8
+      y: 377.8,
     },
-    "178": {
+    178: {
       name: "Dominica",
       parent_id: "DM",
       x: 642.2,
-      y: 402.7
+      y: 402.7,
     },
-    "179": {
+    179: {
       name: "Falkland Islands",
       parent_id: "FK",
       x: 701.1,
-      y: 832
+      y: 832,
     },
-    "180": {
+    180: {
       name: "Faeroe Islands",
       parent_id: "FO",
       x: 955,
-      y: 108.6
+      y: 108.6,
     },
-    "181": {
+    181: {
       name: "Grenada",
       parent_id: "GD",
       x: 639,
-      y: 424
+      y: 424,
     },
-    "182": {
+    182: {
       name: "Hong Kong",
-      parent_id: "HK"
+      parent_id: "HK",
     },
-    "183": {
+    183: {
       name: "Saint Kitts and Nevis",
       parent_id: "KN",
       x: 635.1,
-      y: 390.4
+      y: 390.4,
     },
-    "184": {
+    184: {
       name: "Saint Lucia",
       parent_id: "LC",
       x: 643.6,
-      y: 412.6
+      y: 412.6,
     },
-    "185": {
+    185: {
       name: "Liechtenstein",
-      parent_id: "LI"
+      parent_id: "LI",
     },
-    "186": {
+    186: {
       name: "Saint Martin (French)",
       parent_id: "MF",
       x: 634.1,
-      y: 385.8
+      y: 385.8,
     },
-    "187": {
+    187: {
       name: "Maldives",
       parent_id: "MV",
       x: 1402.8,
-      y: 474.9
+      y: 474.9,
     },
-    "188": {
+    188: {
       name: "Malta",
       parent_id: "MT",
       x: 1063.3,
-      y: 271.4
+      y: 271.4,
     },
-    "189": {
+    189: {
       name: "Montserrat",
       parent_id: "MS",
       x: 638.2,
-      y: 394.4
+      y: 394.4,
     },
-    "190": {
+    190: {
       name: "Mauritius",
       parent_id: "MU",
       x: 1306.8,
-      y: 632
+      y: 632,
     },
-    "191": {
+    191: {
       name: "New Caledonia",
       parent_id: "NC",
       x: 1904.8,
-      y: 638.1
+      y: 638.1,
     },
-    "192": {
+    192: {
       name: "Nauru",
       parent_id: "NR",
       x: 1932.9,
-      y: 505.1
+      y: 505.1,
     },
-    "193": {
+    193: {
       name: "Pitcairn Islands",
-      parent_id: "PN"
+      parent_id: "PN",
     },
-    "194": {
+    194: {
       name: "Puerto Rico",
       parent_id: "PR",
       x: 615.4,
-      y: 384.8
+      y: 384.8,
     },
-    "195": {
+    195: {
       name: "French Polynesia",
       parent_id: "PF",
       x: 150.9,
-      y: 615.2
+      y: 615.2,
     },
-    "196": {
+    196: {
       name: "Singapore",
       parent_id: "SG",
       x: 1575,
-      y: 494.7
+      y: 494.7,
     },
-    "197": {
+    197: {
       name: "Solomon Islands",
       parent_id: "SB",
       x: 1890.6,
-      y: 563.6
+      y: 563.6,
     },
-    "198": {
+    198: {
       name: "São Tomé and Principe",
       parent_id: "ST",
       x: 1023.8,
-      y: 500.3
+      y: 500.3,
     },
-    "199": {
+    199: {
       name: "Saint Martin (Dutch)",
       parent_id: "SX",
       x: 634,
-      y: 386
+      y: 386,
     },
-    "200": {
+    200: {
       name: "Seychelles",
       parent_id: "SC",
       x: 1248.3,
-      y: 562.2
+      y: 562.2,
     },
-    "201": {
+    201: {
       name: "Turks and Caicos Islands",
       parent_id: "TC",
       x: 587.7,
-      y: 361.8
+      y: 361.8,
     },
-    "202": {
+    202: {
       name: "Tonga",
       parent_id: "TO",
       x: 12.6,
-      y: 637.9
+      y: 637.9,
     },
-    "203": {
+    203: {
       name: "Trinidad and Tobago",
       parent_id: "TT",
       x: 640.7,
-      y: 436
+      y: 436,
     },
-    "204": {
+    204: {
       name: "Saint Vincent and the Grenadines",
       parent_id: "VC",
       x: 642.1,
-      y: 416.7
+      y: 416.7,
     },
-    "205": {
+    205: {
       name: "British Virgin Islands",
       parent_id: "VG",
       x: 625.5,
-      y: 383.5
+      y: 383.5,
     },
-    "206": {
+    206: {
       name: "United States Virgin Islands",
       parent_id: "VI",
       x: 624.1,
-      y: 388
+      y: 388,
     },
-    "207": {
+    207: {
       name: "Cyprus",
       parent_id: "CY",
       x: 1160.6,
-      y: 277.7
+      y: 277.7,
     },
-    "208": {
+    208: {
       name: "Reunion (France)",
       parent_id: "RE",
       x: 1295,
-      y: 637.4
+      y: 637.4,
     },
-    "209": {
+    209: {
       name: "Mayotte (France)",
       parent_id: "YT",
       x: 1240.4,
-      y: 584.6
+      y: 584.6,
     },
-    "210": {
+    210: {
       name: "Martinique (France)",
       parent_id: "MQ",
       x: 643.2,
-      y: 406.8
+      y: 406.8,
     },
-    "211": {
+    211: {
       name: "Guadeloupe (France)",
       parent_id: "GP",
       x: 640.7,
-      y: 398
+      y: 398,
     },
-    "212": {
+    212: {
       name: "Curaco (Netherlands)",
       parent_id: "CW",
       x: 598.5,
-      y: 424
+      y: 424,
     },
-    "213": {
+    213: {
       name: "Canary Islands (Spain)",
       parent_id: "IC",
       x: 895.8,
-      y: 320.2
-    }
+      y: 320.2,
+    },
   },
   legend: {
-    entries: []
+    entries: [],
   },
   regions: {
-    "0": {
+    0: {
       name: "North America",
-      states: []
+      states: [],
     },
-    "1": {
+    1: {
       name: "South America",
-      states: []
+      states: [],
     },
-    "2": {
+    2: {
       name: "Europe",
-      states: []
+      states: [],
     },
-    "3": {
+    3: {
       name: "Africa and the Middle East",
-      states: []
+      states: [],
     },
-    "4": {
+    4: {
       name: "South Asia",
-      states: []
+      states: [],
     },
-    "5": {
+    5: {
       name: "North Asia",
       states: [
         "MN",
@@ -2047,8 +2047,8 @@ var simplemaps_worldmap_mapdata={
         "TJ",
         "TM",
         "UZ",
-        "KG"
-      ]
-    }
-  }
+        "KG",
+      ],
+    },
+  },
 };

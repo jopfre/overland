@@ -32,11 +32,30 @@ export default function WorldMap() {
   useEffect(() => {
     if (typeof window.simplemaps_worldmap === "undefined") return;
 
+    // Define warning colors
+    const warningColors = {
+      avoid_all_travel_to_whole_country: "#FF0000", // Red
+      avoid_all_travel_to_parts: "#FFA500", // Orange
+      avoid_all_but_essential_travel_to_parts: "#FFFF00", // Yellow
+      avoid_all_but_essential_travel_to_whole_country: "#FFA500", // Orange
+    };
+
     // Update map state colors based on safety
     Object.entries(safetyStatus).forEach(([code, info]) => {
       if (window.simplemaps_worldmap_mapdata.state_specific[code]) {
-        window.simplemaps_worldmap_mapdata.state_specific[code].color =
-          info.safe ? "#90EE90" : "#FFB6C1";
+        let color = "#90EE90"; // Default green for safe countries
+
+        // Check if country has warnings and alertStatus exists
+        if (
+          info?.alertStatus &&
+          Array.isArray(info.alertStatus) &&
+          info.alertStatus.length > 0
+        ) {
+          const warning = info.alertStatus[0];
+          color = warningColors[warning] || "#FFB6C1";
+        }
+
+        window.simplemaps_worldmap_mapdata.state_specific[code].color = color;
       }
     });
 
@@ -55,14 +74,16 @@ export default function WorldMap() {
       // Process safety information
       const status = {};
       data.forEach((country) => {
-        if (country.hasWarnings) {
+        if (country.hasWarnings && Array.isArray(country.alertStatus)) {
           status[country.code] = {
             safe: false,
+            alertStatus: country.alertStatus,
             message: `Travel warning: ${country.alertStatus.join(", ")}`,
           };
         } else {
           status[country.code] = {
             safe: true,
+            alertStatus: [],
             message: "No specific FCDO warnings against travel",
           };
         }
