@@ -75,20 +75,44 @@ export default function WorldMap() {
       const status = {};
       data.forEach((country) => {
         if (country.hasWarnings && Array.isArray(country.alertStatus)) {
+          const warning = country.alertStatus[0].replace(/_/g, " ");
           status[country.code] = {
             safe: false,
             alertStatus: country.alertStatus,
-            message: `Travel warning: ${country.alertStatus.join(", ")}`,
+            message: `Travel warning: ${warning}`,
           };
+
+          // Update map data with warning information
+          if (
+            window.simplemaps_worldmap_mapdata?.state_specific?.[country.code]
+          ) {
+            window.simplemaps_worldmap_mapdata.state_specific[
+              country.code
+            ].description = `${status[country.code].message}`;
+          }
         } else {
           status[country.code] = {
             safe: true,
             alertStatus: [],
             message: "No specific FCDO warnings against travel",
           };
+
+          // Update map data with safe status
+          if (
+            window.simplemaps_worldmap_mapdata?.state_specific?.[country.code]
+          ) {
+            window.simplemaps_worldmap_mapdata.state_specific[
+              country.code
+            ].description = `Safe to travel`;
+          }
         }
       });
       setSafetyStatus(status);
+
+      // Reload the map to show updated tooltips
+      if (window.simplemaps_worldmap) {
+        window.simplemaps_worldmap.load();
+      }
     }
     fetchData();
   }, [targetCountries]);
