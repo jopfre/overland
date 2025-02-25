@@ -141,9 +141,15 @@ export default function WorldMap() {
   }, [targetCountries]);
 
   useEffect(() => {
-    // Initialize map after scripts are loaded
     if (typeof window.simplemaps_worldmap !== "undefined") {
-      window.simplemaps_worldmap.load();
+      // Prevent bug where first popup persists
+      window.simplemaps_worldmap.hooks.complete = function () {
+        if (document.getElementById("map")) {
+          setTimeout(() => {
+            document.getElementById("map").style.display = "block";
+          }, 1);
+        }
+      };
     }
   }, []);
 
@@ -154,7 +160,7 @@ export default function WorldMap() {
       <Script src="/js/mapinfo.js" strategy="beforeInteractive" />
       <Script src="/js/worldmap.js" strategy="beforeInteractive" />
 
-      <div id="map" className="w-full "></div>
+      <div id="map" className="w-full hidden"></div>
     </div>
   );
 }
