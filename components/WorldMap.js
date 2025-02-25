@@ -149,8 +149,10 @@ export default function WorldMap() {
 
   return (
     <div className="relative w-full h-full flex items-center justify-center">
-      <Script src="/mapdata.js" strategy="beforeInteractive" />
-      <Script src="/worldmap.js" strategy="beforeInteractive" />
+      <Script src="/js/mapdata.js" strategy="beforeInteractive" />
+      <Script src="/js/lib/raphael.js" strategy="beforeInteractive" />
+      <Script src="/js/mapinfo.js" strategy="beforeInteractive" />
+      <Script src="/js/worldmap.js" strategy="beforeInteractive" />
 
       <div id="map" className="w-full "></div>
     </div>
