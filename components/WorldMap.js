@@ -75,20 +75,43 @@ export default function WorldMap() {
       const status = {};
       data.forEach((country) => {
         if (country.hasWarnings && Array.isArray(country.alertStatus)) {
-          const warning = country.alertStatus[0].replace(/_/g, " ");
+          const warning =
+            country.alertStatus[0].replace(/_/g, " ").charAt(0).toUpperCase() +
+            country.alertStatus[0].replace(/_/g, " ").slice(1);
           status[country.code] = {
             safe: false,
             alertStatus: country.alertStatus,
-            message: `Travel warning: ${warning}`,
+            message: `${warning}`,
+            warningMap: warning.includes("parts") ? country.image : null,
+            warningDetails: warning.includes("parts")
+              ? extractWarningDetails(country.warningDetails)
+              : null,
           };
 
           // Update map data with warning information
           if (
             window.simplemaps_worldmap_mapdata?.state_specific?.[country.code]
           ) {
+            // Start with the warning message
+            let description = `<p style="font-size: 12px;">${
+              status[country.code].message
+            }</p>`;
+
+            // Add map image if available
+            if (status[country.code].warningMap) {
+              description += `<img src="${status[country.code].warningMap}" 
+                alt="Travel warning map" 
+                style="max-width: 300px; margin-top: 10px;" />`;
+            } else if (status[country.code].warningDetails) {
+              // Add warning details if no map but details available
+              description += `\n\n<div style="font-size: 12px;">${
+                status[country.code].warningDetails
+              }</div>`;
+            }
+
             window.simplemaps_worldmap_mapdata.state_specific[
               country.code
-            ].description = `${status[country.code].message}`;
+            ].description = description;
           }
         } else {
           status[country.code] = {
@@ -103,7 +126,7 @@ export default function WorldMap() {
           ) {
             window.simplemaps_worldmap_mapdata.state_specific[
               country.code
-            ].description = `Safe to travel`;
+            ].description = `<p style="font-size: 12px;">Safe to travel</p>`;
           }
         }
       });
@@ -125,27 +148,35 @@ export default function WorldMap() {
   }, []);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full flex items-center justify-center">
       <Script src="/mapdata.js" strategy="beforeInteractive" />
       <Script src="/worldmap.js" strategy="beforeInteractive" />
 
-      <div id="map" className="w-full h-full"></div>
-
-      {/* Display safety information */}
-      {/* <div className="absolute top-4 right-4 bg-white p-4 rounded shadow">
-        <h3 className="font-bold mb-2">Travel Safety Status:</h3>
-        {Object.entries(safetyStatus).map(([code, info]) => (
-          <div
-            key={code}
-            className={`mb-2 ${info.safe ? "text-green-600" : "text-red-600"}`}
-          >
-            <strong>
-              {countryData?.find((c) => c.code === code)?.name || code}:
-            </strong>{" "}
-            {info.message}
-          </div>
-        ))}
-      </div> */}
+      <div id="map" className="w-full "></div>
     </div>
   );
+}
+
+// Helper function to extract warning details
+function extractWarningDetails(html) {
+  if (!html) return "";
+
+  // Find the content between the markers
+  const startMarker =
+    '<h2 id="areas-where-fcdo-advises-against-travel">Areas where <abbr title="Foreign, Commonwealth &amp; Development Office">FCDO</abbr> advises against travel</h2>';
+  const endMarker = "<p>Find out more about";
+
+  const startIndex = html.indexOf(startMarker);
+  const endIndex = html.indexOf(endMarker);
+
+  if (startIndex === -1 || endIndex === -1) return "";
+
+  // Extract and clean the content, starting after the h2 tag
+  let content = html
+    .substring(startIndex + startMarker.length, endIndex)
+    .replace(/&amp;/g, "&") // Replace HTML entities
+    .replace(/\n\s*\n/g, "\n") // Remove extra newlines
+    .trim();
+
+  return content;
 }

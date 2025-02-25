@@ -36,7 +36,7 @@ var simplemaps_worldmap_mapdata = {
     label_hover_color: "#000000",
     label_size: "12",
     label_font: "Arial",
-    hide_labels: "no",
+    hide_labels: "yes",
 
     //Zoom settings
     zoom: "yes",
@@ -55,7 +55,7 @@ var simplemaps_worldmap_mapdata = {
     popup_opacity: 0.9,
     popup_shadow: 1,
     popup_corners: 5,
-    popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+    popup_font: "16px/1.5 Verdana, Arial, Helvetica, sans-serif",
     popup_nocss: "no",
 
     //Advanced settings

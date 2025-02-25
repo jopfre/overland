@@ -36,7 +36,7 @@ export async function getCountriesData(countryCodes) {
       }
 
       const data = await response.json();
-
+      console.log(data.details?.image?.url);
       // Extract safety information
       const safetyInfo = {
         code,
@@ -47,7 +47,7 @@ export async function getCountriesData(countryCodes) {
         hasWarnings: data.details?.alert_status?.length > 0,
         alertStatus: data.details?.alert_status || [],
         // Extract specific warnings for parts of the country
-        warnings:
+        warningDetails:
           data.details?.parts?.find(
             (part) => part.slug === "warnings-and-insurance"
           )?.body || "",
@@ -56,6 +56,8 @@ export async function getCountriesData(countryCodes) {
           data.details?.parts?.find(
             (part) => part.slug === "safety-and-security"
           )?.body || "",
+        // Add warning map image if available
+        image: data.details?.image?.url || null,
       };
 
       return safetyInfo;
@@ -82,6 +84,7 @@ function getCachedData() {
 
   const { timestamp, data } = JSON.parse(cached);
   const isExpired = Date.now() - timestamp > 24 * 60 * 60 * 1000; // 24 hours
+  // const isExpired = true;
   if (isExpired) {
     localStorage.removeItem(CACHE_KEY);
     return null;
