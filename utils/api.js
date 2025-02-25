@@ -27,11 +27,11 @@ export async function getCountriesData(countryCodes) {
   // Fetch fresh data for all countries
   const promises = countryCodes.map(async (code) => {
     try {
-      const countryName = getCountrySlugFromId(code);
-      const response = await fetch(`${BASE_URL}/${countryName}`);
+      const countrySlug = getCountrySlugFromId(code);
+      const response = await fetch(`${BASE_URL}/${countrySlug}`);
 
       if (!response.ok) {
-        console.warn(`Failed to fetch data for ${countryName} (${code})`);
+        console.warn(`Failed to fetch data for ${countrySlug} (${code})`);
         return null;
       }
 
@@ -40,7 +40,7 @@ export async function getCountriesData(countryCodes) {
       // Extract safety information
       const safetyInfo = {
         code,
-        name: countryName,
+        slug: countrySlug,
         title: data.title,
         updated: data.public_updated_at,
         // Check if FCDO advises against travel

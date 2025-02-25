@@ -4,7 +4,6 @@ import Script from "next/script";
 import { getCountriesData } from "@/utils/api";
 
 export default function WorldMap() {
-  const [countryData, setCountryData] = useState(null);
   const [safetyStatus, setSafetyStatus] = useState({});
   const [targetCountries, setTargetCountries] = useState([]);
 
@@ -69,11 +68,19 @@ export default function WorldMap() {
       if (targetCountries.length === 0) return;
 
       const data = await getCountriesData(targetCountries);
-      setCountryData(data);
 
       // Process safety information
       const status = {};
       data.forEach((country) => {
+        // Set the state_url for the country
+        if (
+          window.simplemaps_worldmap_mapdata?.state_specific?.[country.code]
+        ) {
+          window.simplemaps_worldmap_mapdata.state_specific[
+            country.code
+          ].url = `https://www.gov.uk/foreign-travel-advice/${country.slug}`;
+        }
+
         if (country.hasWarnings && Array.isArray(country.alertStatus)) {
           const warning =
             country.alertStatus[0].replace(/_/g, " ").charAt(0).toUpperCase() +
@@ -131,11 +138,6 @@ export default function WorldMap() {
         }
       });
       setSafetyStatus(status);
-
-      // Reload the map to show updated tooltips
-      if (window.simplemaps_worldmap) {
-        window.simplemaps_worldmap.load();
-      }
     }
     fetchData();
   }, [targetCountries]);
@@ -154,7 +156,7 @@ export default function WorldMap() {
   }, []);
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
+    <div className="relative w-full">
       <Script src="/js/mapdata.js" strategy="beforeInteractive" />
       <Script src="/js/lib/raphael.js" strategy="beforeInteractive" />
       <Script src="/js/mapinfo.js" strategy="beforeInteractive" />
@@ -170,8 +172,9 @@ function extractWarningDetails(html) {
   if (!html) return "";
 
   // Find the content between the markers
-  const startMarker =
-    '<h2 id="areas-where-fcdo-advises-against-travel">Areas where <abbr title="Foreign, Commonwealth &amp; Development Office">FCDO</abbr> advises against travel</h2>';
+  // Using just "advises against travel" will match both cases with and without the space
+  const startMarker = "advises against travel";
+
   const endMarker = "<p>Find out more about";
 
   const startIndex = html.indexOf(startMarker);
@@ -179,9 +182,12 @@ function extractWarningDetails(html) {
 
   if (startIndex === -1 || endIndex === -1) return "";
 
-  // Extract and clean the content, starting after the h2 tag
+  // Find the closing h2 tag after our marker
+  const closingH2Index = html.indexOf("</h2>", startIndex);
+
+  // Extract and clean the content, starting after the closing h2 tag
   let content = html
-    .substring(startIndex + startMarker.length, endIndex)
+    .substring(closingH2Index + "</h2>".length, endIndex)
     .replace(/&amp;/g, "&") // Replace HTML entities
     .replace(/\n\s*\n/g, "\n") // Remove extra newlines
     .trim();
