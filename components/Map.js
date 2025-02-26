@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import { countryOutlines } from "../utils/countryOutlines";
 import { getAlertStatusColor } from "../utils/extractCountryNames";
 
-// Import CSS for Leaflet
 import "leaflet/dist/leaflet.css";
 
 // Create a client-side only version of the map
@@ -19,12 +18,13 @@ const ClientSideMap = ({ countriesData }) => {
     const style = document.createElement("style");
     style.innerHTML = `
       .country-tooltip {
-        max-width: 250px;
+        width: 320px;
       }
       .country-tooltip img {
         display: block;
         margin: 8px auto 0;
         max-width: 100%;
+        width: 100%;
         border-radius: 4px;
       }
     `;
@@ -97,6 +97,27 @@ const ClientSideMap = ({ countriesData }) => {
         tooltipContent += `<br/>Status: No travel warnings`;
       }
 
+      // Check for organized tour requirement
+      if (
+        countryData.data.details &&
+        countryData.data.details.parts &&
+        Array.isArray(countryData.data.details.parts)
+      ) {
+        // Find entry requirements section
+        const entryRequirements = countryData.data.details.parts.find(
+          (part) => part.slug === "entry-requirements"
+        );
+
+        // Check if organized tour is mentioned
+        if (
+          entryRequirements &&
+          entryRequirements.body &&
+          entryRequirements.body.toLowerCase().includes("organised tour")
+        ) {
+          tooltipContent += `<br/><div style="margin-top: 5px; padding: 5px; background-color: #FFF3CD; color: #856404; border-radius: 4px; font-weight: bold;">⚠️ Organized tour required</div>`;
+        }
+      }
+
       // Add image if available
       if (
         countryData.data.details &&
@@ -104,17 +125,21 @@ const ClientSideMap = ({ countriesData }) => {
         countryData.data.details.image.url
       ) {
         tooltipContent += `<br/><img src="${countryData.data.details.image.url}" 
-          alt="${countryName}" style="max-width: 200px; max-height: 150px; margin-top: 8px;" />`;
+          alt="${countryName}" />`;
       }
     }
 
-    // Create a custom tooltip with larger max width to accommodate images
-    const tooltip = layer.bindTooltip(tooltipContent, {
+    // Create a tooltip that follows the cursor
+    const tooltip = L.tooltip({
       permanent: false,
       direction: "top",
       className: "country-tooltip",
-      maxWidth: 250,
+      width: 320,
+      opacity: 0.9,
+      sticky: true, // This makes the tooltip follow the cursor
     });
+
+    tooltip.setContent(tooltipContent);
 
     layer.on({
       mouseover: (e) => {
@@ -126,6 +151,13 @@ const ClientSideMap = ({ countriesData }) => {
           fillOpacity: 0.9,
         });
         layer.bringToFront();
+
+        // Show tooltip at cursor position
+        tooltip.setLatLng(e.latlng).addTo(layer._map);
+      },
+      mousemove: (e) => {
+        // Update tooltip position as cursor moves
+        tooltip.setLatLng(e.latlng);
       },
       mouseout: (e) => {
         const layer = e.target;
@@ -135,6 +167,9 @@ const ClientSideMap = ({ countriesData }) => {
           dashArray: "3",
           fillOpacity: 0.7,
         });
+
+        // Remove tooltip when mouse leaves the country
+        layer._map.closeTooltip(tooltip);
       },
       click: (e) => {
         // Handle click event if needed
@@ -153,7 +188,7 @@ const ClientSideMap = ({ countriesData }) => {
       <MapContainer
         center={[20, 0]}
         zoom={2}
-        style={{ height: "100%", width: "100%" }}
+        className="h-full w-full"
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -167,91 +202,31 @@ const ClientSideMap = ({ countriesData }) => {
         />
       </MapContainer>
 
-      <div
-        className="map-legend"
-        style={{
-          position: "absolute",
-          bottom: "20px",
-          right: "20px",
-          background: "white",
-          padding: "10px",
-          borderRadius: "5px",
-          boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-          zIndex: 1000,
-        }}
-      >
-        <h4>Travel Advice</h4>
-        <div>
-          <span
-            style={{
-              display: "inline-block",
-              width: "20px",
-              height: "20px",
-              backgroundColor: "#FF0000",
-              marginRight: "5px",
-            }}
-          ></span>{" "}
-          Avoid all travel
+      <div className="absolute bottom-5 right-5 bg-white p-2.5 rounded-md shadow-md z-[1000]">
+        <h4 className="font-medium mb-2">Travel Advice</h4>
+        <div className="flex items-center mb-1">
+          <span className="inline-block w-5 h-5 bg-[#FF0000] mr-1.5"></span>
+          <span>Avoid all travel</span>
         </div>
-        <div>
-          <span
-            style={{
-              display: "inline-block",
-              width: "20px",
-              height: "20px",
-              backgroundColor: "#FFA500",
-              marginRight: "5px",
-            }}
-          ></span>{" "}
-          Avoid all but essential travel
+        <div className="flex items-center mb-1">
+          <span className="inline-block w-5 h-5 bg-[#FFA500] mr-1.5"></span>
+          <span>Avoid all but essential travel</span>
         </div>
-        <div>
-          <span
-            style={{
-              display: "inline-block",
-              width: "20px",
-              height: "20px",
-              backgroundColor: "#FF6347",
-              marginRight: "5px",
-            }}
-          ></span>{" "}
-          Avoid all travel to parts
+        <div className="flex items-center mb-1">
+          <span className="inline-block w-5 h-5 bg-[#FF6347] mr-1.5"></span>
+          <span>Avoid all travel to parts</span>
         </div>
-        <div>
-          <span
-            style={{
-              display: "inline-block",
-              width: "20px",
-              height: "20px",
-              backgroundColor: "#FFD700",
-              marginRight: "5px",
-            }}
-          ></span>{" "}
-          Avoid all but essential travel to parts
+        <div className="flex items-center mb-1">
+          <span className="inline-block w-5 h-5 bg-[#FFD700] mr-1.5"></span>
+          <span>Avoid all but essential travel to parts</span>
         </div>
-        <div>
-          <span
-            style={{
-              display: "inline-block",
-              width: "20px",
-              height: "20px",
-              backgroundColor: "#00FF00",
-              marginRight: "5px",
-            }}
-          ></span>{" "}
-          No specific warnings
+        <div className="flex items-center mb-1">
+          <span className="inline-block w-5 h-5 bg-[#00FF00] mr-1.5"></span>
+          <span>No specific warnings</span>
         </div>
-        <div>
-          <span
-            style={{
-              display: "inline-block",
-              width: "20px",
-              height: "20px",
-              backgroundColor: "#CCCCCC",
-              marginRight: "5px",
-            }}
-          ></span>{" "}
-          No data available
+        <div className="flex items-center">
+          <span className="inline-block w-5 h-5 bg-[#CCCCCC] mr-1.5"></span>
+          <span>No data available</span>
         </div>
       </div>
     </>
@@ -266,7 +241,7 @@ const DynamicMap = dynamic(() => Promise.resolve(ClientSideMap), {
 // Main component that renders the dynamic map
 export default function LeafletMap({ countriesData = [] }) {
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div className="h-screen w-full">
       <DynamicMap countriesData={countriesData} />
     </div>
   );

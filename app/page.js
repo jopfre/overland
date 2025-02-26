@@ -98,7 +98,7 @@ export default async function Home() {
     })
   );
 
-  console.log(countriesData);
+  console.log(countriesData.find((c) => c?.code === "IR"));
 
   // Filter out any null responses
   const validCountriesData = countriesData.filter(Boolean);
