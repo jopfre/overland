@@ -99,12 +99,11 @@ const ClientSideMap = ({ countriesData }) => {
     const styleId = styleUrl.startsWith("#") ? styleUrl.substring(1) : styleUrl;
 
     const statusMap = {
-      "icon-62": "Border Checkpoint",
-      "icon-1899": "Open Border",
-      "icon-1644": "Closed Border",
-      "icon-1602": "Restricted Access",
-      "icon-1535": "Limited Hours",
-      // Add more mappings as needed
+      "icon-62": "Open", // Open border
+      "icon-15": "Possible problems", // Possible problems
+      "icon-124": "Closed", // Closed border
+      "icon-163": "Unknown", // Unknown
+      "icon-22": "Bilateral", // Bilateral border crossing
     };
 
     return statusMap[styleId] || "Border Checkpoint";
@@ -172,14 +171,15 @@ const ClientSideMap = ({ countriesData }) => {
       if (countryData.data.details && countryData.data.details.alert_status) {
         const alertStatus = countryData.data.details.alert_status;
         if (alertStatus.length > 0) {
-          tooltipContent += `<br/>Status: ${alertStatus
+          tooltipContent += `<br/>${alertStatus
             .join(", ")
-            .replace(/_/g, " ")}`;
+            .replace(/_/g, " ")
+            .replace(/^\w/, (c) => c.toUpperCase())}`;
         } else {
-          tooltipContent += `<br/>Status: No travel warnings`;
+          tooltipContent += `<br/>No travel warnings`;
         }
       } else {
-        tooltipContent += `<br/>Status: No travel warnings`;
+        tooltipContent += `<br/>No travel warnings`;
       }
 
       // Check for organized tour requirement
@@ -310,8 +310,8 @@ const ClientSideMap = ({ countriesData }) => {
                   dangerouslySetInnerHTML={{ __html: crossing.description }}
                 />
                 {crossing.properties && crossing.properties.styleUrl && (
-                  <p className="text-sm text-gray-600 mt-2">
-                    Status: {getBorderStatusText(crossing.properties.styleUrl)}
+                  <p className="text-xs  mt-2">
+                    {getBorderStatusText(crossing.properties.styleUrl)}
                   </p>
                 )}
               </div>

@@ -1,7 +1,7 @@
 import { getCountryNamesByCode } from "@/utils/extractCountryNames";
 import { getFromCache, saveToCache } from "@/utils/cacheUtils";
 import LeafletMap from "@/components/Map";
-
+//https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#AU
 const countries = [
   "MN",
   "RU",
@@ -31,6 +31,31 @@ const countries = [
   "TM",
   "UZ",
   "KG",
+  // "AA",
+  // "AB",
+  // "AC",
+  // "AD",
+  // "AE",
+  // "AF",
+  // "AG",
+  // "AH",
+  // "AI",
+  // "AJ",
+  // "AK",
+  // "AL",
+  // "AM",
+  // "AN",
+  // "AO",
+  // "AP",
+  // "AQ",
+  // "AR",
+  // "AS",
+  // "AT",
+  // "AU",
+  // "AV",
+  // "AW",
+  // "AX",
+  // "AY",
 ];
 
 async function getData(countrySlug) {
@@ -103,6 +128,7 @@ export default async function Home() {
   // Filter out any null responses
   const validCountriesData = countriesData.filter(Boolean);
 
+  console.log(validCountriesData.find((c) => c?.code === "TR"));
   return (
     <main className="">
       <LeafletMap countriesData={validCountriesData} />
