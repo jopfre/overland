@@ -1,4 +1,4 @@
-import Map from "@/components/MapSvg";
+import Map from "@/components/MapSvg/MapSvg";
 import Leaflet from "@/components/Leaflet";
 const countries = [
   "MN",
