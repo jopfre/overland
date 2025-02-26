@@ -13,8 +13,35 @@ import MapLegend from "./MapLegend";
 // Create a client-side only version of the map
 const ClientSideMap = ({ countriesData }) => {
   // Import Leaflet components dynamically
-  const { MapContainer, TileLayer, GeoJSON } = require("react-leaflet");
+  const {
+    MapContainer,
+    TileLayer,
+    GeoJSON,
+    Marker,
+    Popup,
+  } = require("react-leaflet");
   const L = require("leaflet");
+  const [borderCrossings, setBorderCrossings] = useState([]);
+
+  // Fetch border crossings from our API endpoint
+  useEffect(() => {
+    const fetchBorderCrossings = async () => {
+      try {
+        const response = await fetch("/api/border-crossings");
+        const data = await response.json();
+
+        if (data.crossings) {
+          setBorderCrossings(data.crossings);
+        } else {
+          console.error("No crossings data returned from API");
+        }
+      } catch (error) {
+        console.error("Error fetching border crossings:", error);
+      }
+    };
+
+    fetchBorderCrossings();
+  }, []);
 
   // Add custom CSS for tooltips
   useEffect(() => {
@@ -196,6 +223,17 @@ const ClientSideMap = ({ countriesData }) => {
     });
   };
 
+  // Create a custom icon for border crossings
+  const borderCrossingIcon = new L.Icon({
+    iconUrl: "/border-crossing-icon.svg",
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+    popupAnchor: [0, -12],
+  });
+
+  // Fallback icon if the custom one fails to load
+  const defaultIcon = new L.Icon.Default();
+
   return (
     <>
       <MapContainer
@@ -213,6 +251,35 @@ const ClientSideMap = ({ countriesData }) => {
           style={countryStyle}
           onEachFeature={onEachFeature}
         />
+
+        {/* Add border crossing markers */}
+        {borderCrossings.map((crossing, index) => (
+          <Marker
+            key={`crossing-${index}`}
+            position={crossing.position}
+            icon={borderCrossingIcon}
+            eventHandlers={{
+              error: (e) => {
+                console.log("Error loading icon, using default");
+                e.target.setIcon(defaultIcon);
+              },
+            }}
+          >
+            <Popup>
+              <div>
+                <h3 className="font-bold">{crossing.name}</h3>
+                <div
+                  dangerouslySetInnerHTML={{ __html: crossing.description }}
+                />
+                {crossing.properties && crossing.properties.styleUrl && (
+                  <p className="text-sm text-gray-600 mt-2">
+                    Style: {crossing.properties.styleUrl}
+                  </p>
+                )}
+              </div>
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
 
       <MapLegend />
