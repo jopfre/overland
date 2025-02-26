@@ -1,5 +1,5 @@
-import Map from "@/components/Map";
-
+import Map from "@/components/MapSvg";
+import Leaflet from "@/components/Leaflet";
 const countries = [
   "MN",
   "RU",
@@ -44,7 +44,8 @@ export default async function Home() {
 
   return (
     <main className="">
-      <Map countries={countries} safetyStatus={safetyStatus} />
+      {/* <Map countries={countries} safetyStatus={safetyStatus} /> */}
+      <Leaflet />
     </main>
   );
 }
