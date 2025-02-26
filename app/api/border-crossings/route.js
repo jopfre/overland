@@ -1,17 +1,28 @@
 import { NextResponse } from "next/server";
 import { DOMParser } from "xmldom";
 import * as tj from "@mapbox/togeojson";
+import { getFromCache, saveToCache } from "@/utils/cacheUtils";
+
+const CACHE_KEY = "border-crossings";
 
 export async function GET() {
   try {
     console.log("Border crossings API called at:", new Date().toISOString());
 
+    // Try to get data from cache first
+    const cachedData = getFromCache(CACHE_KEY);
+    if (cachedData) {
+      console.log(`Returning ${cachedData.length} border crossings from cache`);
+      return NextResponse.json({ crossings: cachedData });
+    }
+
+    console.log("Cache miss, fetching fresh data");
     const kmlUrl =
       "https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=1Ml8xrhk9Jwr00_GdccYtBrEYScU&lid=z0rmBFooQBOI.klH5gTa0AB_k";
 
     console.log("Fetching KML data from URL:", kmlUrl);
     const fetchStart = performance.now();
-    const response = await fetch(kmlUrl, { next: { revalidate: 86400 } }); // Cache for 24 hours
+    const response = await fetch(kmlUrl, { next: { revalidate: 86400 } }); // Keep Vercel's cache as a backup
     const fetchEnd = performance.now();
 
     console.log(
@@ -54,7 +65,13 @@ export async function GET() {
       });
     }
 
-    console.log(`Returning ${crossings.length} border crossings`);
+    // Save the processed data to cache
+    saveToCache(CACHE_KEY, crossings);
+    console.log(`Saved ${crossings.length} border crossings to cache`);
+
+    console.log(
+      `Returning ${crossings.length} border crossings from fresh data`
+    );
     return NextResponse.json({ crossings });
   } catch (error) {
     console.error("Error fetching border crossings:", error);
