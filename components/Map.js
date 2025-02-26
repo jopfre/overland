@@ -7,6 +7,9 @@ import { getAlertStatusColor } from "../utils/extractCountryNames";
 
 import "leaflet/dist/leaflet.css";
 
+// Import the MapLegend component
+import MapLegend from "./MapLegend";
+
 // Create a client-side only version of the map
 const ClientSideMap = ({ countriesData }) => {
   // Import Leaflet components dynamically
@@ -172,12 +175,22 @@ const ClientSideMap = ({ countriesData }) => {
         layer._map.closeTooltip(tooltip);
       },
       click: (e) => {
-        // Handle click event if needed
-        console.log(`Clicked on ${countryName}`);
-
-        // If you want to show more details on click, you could do something like:
+        // Open UK government travel advice website for the clicked country
         if (countryData && countryData.data) {
-          console.log(countryData.data);
+          // Get the country slug from the data if available
+          const countrySlug =
+            countryData.data.details?.slug ||
+            countryName.toLowerCase().replace(/\s+/g, "-");
+
+          // Construct the URL for the UK government travel advice
+          const ukGovUrl = `https://www.gov.uk/foreign-travel-advice/${countrySlug}`;
+
+          // Open the URL in a new tab
+          window.open(ukGovUrl, "_blank");
+
+          console.log(`Opening travel advice for ${countryName}: ${ukGovUrl}`);
+        } else {
+          console.log(`No data available for ${countryName}`);
         }
       },
     });
@@ -202,33 +215,7 @@ const ClientSideMap = ({ countriesData }) => {
         />
       </MapContainer>
 
-      <div className="absolute bottom-5 right-5 bg-white p-2.5 rounded-md shadow-md z-[1000]">
-        <h4 className="font-medium mb-2">Travel Advice</h4>
-        <div className="flex items-center mb-1">
-          <span className="inline-block w-5 h-5 bg-[#FF0000] mr-1.5"></span>
-          <span>Avoid all travel</span>
-        </div>
-        <div className="flex items-center mb-1">
-          <span className="inline-block w-5 h-5 bg-[#FFA500] mr-1.5"></span>
-          <span>Avoid all but essential travel</span>
-        </div>
-        <div className="flex items-center mb-1">
-          <span className="inline-block w-5 h-5 bg-[#FF6347] mr-1.5"></span>
-          <span>Avoid all travel to parts</span>
-        </div>
-        <div className="flex items-center mb-1">
-          <span className="inline-block w-5 h-5 bg-[#FFD700] mr-1.5"></span>
-          <span>Avoid all but essential travel to parts</span>
-        </div>
-        <div className="flex items-center mb-1">
-          <span className="inline-block w-5 h-5 bg-[#00FF00] mr-1.5"></span>
-          <span>No specific warnings</span>
-        </div>
-        <div className="flex items-center">
-          <span className="inline-block w-5 h-5 bg-[#CCCCCC] mr-1.5"></span>
-          <span>No data available</span>
-        </div>
-      </div>
+      <MapLegend />
     </>
   );
 };

@@ -1,0 +1,2336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Naamloze laag</name>
+    <Style id="icon-102-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/102-pink.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-102-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/102-pink.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-102">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-102-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-102-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-124-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/124-red.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-124-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/124-red.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-124">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-124-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-124-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-124-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/124-red.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-124-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/124-red.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-124-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-124-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-124-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-158-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/158-yellow.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-158-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/158-yellow.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-158">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-158-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-158-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-158-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/158-yellow.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-158-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/158-yellow.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-158-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-158-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-158-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-163-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/163-lightblue.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-163-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/163-lightblue.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-163">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-163-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-163-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-163-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/163-lightblue.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-163-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/163-lightblue.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-163-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-163-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-163-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-22-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-22-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-62-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/62-green.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-62-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/62-green.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-62">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-62-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-62-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-62-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/62-green.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-62-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/62-green.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-62-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-62-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-62-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-CC0000-5000-normal">
+      <LineStyle>
+        <color>ff0000cc</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-CC0000-5000-highlight">
+      <LineStyle>
+        <color>ff0000cc</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-CC0000-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-CC0000-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-CC0000-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FF0000-5000-normal">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FF0000-5000-highlight">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FF0000-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FF0000-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FF0000-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Korday</name>
+      <description>Border crossing has reopened after reconstruction in 2020-2022.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          74.705658,43.026235,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dostyk/Druzba-Alashankou</name>
+      <description>Entry point for rail and road travel. By rail, count on 8 hours at the border. China and Soviet railroads use different gauges, and the wheels of the train need to be changed. This is also the location of the legendary Dzungarian gate (http://en.wikipedia.org/wiki/Dzungarian_Gate).</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          82.560196,45.205263,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khorgos / Nur Zholy</name>
+      <description>Main border crossing between Almaty and Urumqi.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          80.3958022,44.1576718,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Maikapchagai-Jeminay</name>
+      <description>Road link between China and Kazakhstan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          85.615082,47.492153,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bakhty-Tacheng</name>
+      <description>Road link between China and Kazakhstan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          82.787476,46.680537,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Narynkol-Muzart</name>
+      <description>closed due to lack of traffic.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          80.238647,42.710696,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Alekseevka- Aheytubiek</name>
+      <description>Although officially opened in 1992, this crossing is still not operational.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          85.756531,48.414619,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Karkara Valley</name>
+      <description>International border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          79.181213,42.799431,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ak Tilek</name>
+      <description>Limited to bilateral commercial truck traffic.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          74.863586,42.995357,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sypatai Batyr (Chaldybar)</name>
+      <description>Road link between Kazakhstan and Kyrgyzstan</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          73.510787,42.823126,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Aisha Bibi - Chongkapka</name>
+      <description>Generally straightforward crossing. A lot of public transport available between Taraz and Talas.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          71.50177,42.79137,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chernayevka/Gisht-Kuprik/Zhibek-Joly</name>
+      <description>It is the main road and rail link between Uzbekistan and Kazakhstan. Generally straightforward crossing. Plenty of public transport to Shymkent and Tashkent with marshrutkas and shared taxis.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          69.358277,41.470234,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tajen</name>
+      <description>Remote border crossing with little information available. Own transport needed.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          55.997014,44.89589,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Temirbaba</name>
+      <description>Closed since June 2018 until further notice.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          52.662792,41.919555,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shardara</name>
+      <description>Border crossing between Kazakhstan and Uzbekistan</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          67.911987,41.14557,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>B. Konysbayeva / Yalama</name>
+      <description>A valid multilateral border crossing between Kazakhstan and Uzbekistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          68.727357,40.969659,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kaplanbek</name>
+      <description>A multilateral border crossing between Uzbekistan and Kazakhstan. Closed for renovation.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          69.2066577,41.4568471,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Taskala</name>
+      <description>International border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          49.910202,51.198709,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mashtakov</name>
+      <description>Main road link between Uralsk and Samara.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          51.002998,51.6766,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dimitrovo-Ilek</name>
+      <description>Main road link between Uralsk and Orenburg. International border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          53.376474,51.488117,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zhanaul</name>
+      <description>International border crossing. Big and generally smooth.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          48.749814,46.546664,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zhaisan</name>
+      <description>Main road link between Aqtobe and Orenburg. International border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          56.147218,50.856324,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kairak/Alimbetovka</name>
+      <description>Main road link between Aqtobe and Orsk. International border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          58.471985,51.081096,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Podgorodka</name>
+      <description>International border crossing on the road from Chelyabinsk to Kostanay.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.626348,54.006256,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Rail crossing</name>
+      <description>Rail crossing between Kostanay and Magnitogorsk.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.120892,52.986374,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kazancevskoe</name>
+      <description>International road and rail border crossing between Chelyabinsk and Petropavlovsk.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          68.26149,55.093105,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Roslavka</name>
+      <description>International road and rail border crossing on the Omsk - Petropavlovsk line. Operates at night. After 6 pm, Petropavlovsk is connected to Omsk only by shared taxis.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          70.983095,54.921026,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Karaagash</name>
+      <description>International road border crossing, operating on the main highway between Pavlodar and Omsk.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          75.052521,53.794466,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pavlodar - Barnaul</name>
+      <description>International rail and road border crossing between Pavlodar and Barnaul.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          78.627777,52.530425,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zhezkent</name>
+      <description>International rail and road border crossing between Semey and Rubtsovsk. A349 is a good road.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          81.11412,51.204074,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shemonaika</name>
+      <description>International road border crossing between Ust-Kamenogorsk and Rubtsovsk. Roads are fine, and you avoid the busier Semey (Semipalatinsk) border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          81.951914,50.780855,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ridder/Putintsevo - Ust Kan</name>
+      <description>Bilateral border crossing. Only open to residents of Kazakhstan and Russia.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          84.254258,50.369185,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mountain pass</name>
+      <description>Apparently there is a road between Putintsevo and Ust Kan, but this is a bilateral border crossing. Only for residents of Kazakhstan and Russia.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          84.835439,50.102194,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dustlyk/Dostyk</name>
+      <description>Main border crossing for travelers and locals alike. Public transport is available on both sides.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          72.761765,40.571719,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khanabad</name>
+      <description>Border crossing on the road between Jalal-Abad and Andijon. Long-closed, this border might have reopened. Confirmation needed.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          72.978058,40.825241,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Uchkurgan</name>
+      <description>Closed since 2018</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          72.190475,41.097982,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bekobod / Kushtegirmon</name>
+      <description>We believe this is an international border crossing.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          69.30209,40.196364,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jartepa - Sarazm (Samarkand-Penjikent)</name>
+      <description>Multilateral border crossing. </description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          67.400436,39.518079,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Denau-Tursanzade</name>
+      <description>Border crossing between Tajikistan and Uzbekistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          68.104248,38.500893,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Termiz - Hayratan</name>
+      <description>Border crossing between Uzbekistan and Afganistan on the road to Mazar-e-Sharif. </description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          67.427216,37.228415,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Farap - Alat</name>
+      <description>International border crossing. Main road between Bokhara and Turkmenabat.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          63.717957,39.221615,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Druzhba/Gazadzhak</name>
+      <description>International border crossing.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.372375,41.188989,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shavat - Dashoguz</name>
+      <description>International border crossing connecting Khiva and Urgench with Dashoguz.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          60.081482,41.763117,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khojayli - Konye-Urgench</name>
+      <description>Connecting Nukus with Konje-Urgench</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          59.298706,42.372242,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gulbahor</name>
+      <description>International border crossing</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          67.7962868,37.1999389,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Patar (Besharik - Konibodom)</name>
+      <description>Border crossing between Khujand and Kokand.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          70.458069,40.365381,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tawraghudi-Serkhetabat</name>
+      <description>Border crossing between Turkmenistan and Afghanistan</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          62.284584,35.26216,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Islam Qala - Taybad</name>
+      <description>Border crossing between Afghanistan and Iran.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.003304,34.709162,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khyber Pass</name>
+      <styleUrl>#icon-22-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          71.093903,34.125448,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Spin Buldak - Chaman</name>
+      <description>Border crossing between Afghanistan and Pakistan, on the main Kandahar - Quetta road.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          66.438446,30.954058,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Milak - Zaranj</name>
+      <description>Border crossing between Afghanistan and Iran.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          61.808567,30.952291,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shir Khan Bandar / Panji Poyon</name>
+      <description>International border crossing connecting Dushanbe with Kunduz with a bridge over the Syr Darya.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          68.609791,37.191091,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ishkashim</name>
+      <description>Border crossing between Tajikistan and Afghanistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          71.593094,36.726227,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Irkeshtam</name>
+      <styleUrl>#icon-62-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          73.9235257,39.693913,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bor Dobo - Kyzylart</name>
+      <description>Border crossing on the Pamir Highway between Kyrgyzstan and Tajikistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          73.322239,39.3846,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Qolma pass</name>
+      <description>After a long period of uncertainty, the Qolma pass is open for all foreigners since 2017</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          74.80167,38.149526,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Batken - Isfara</name>
+      <description>Multilateral border crossing between Kyrgyzstan and Tajikistan.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          70.7317842,40.1126734,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kulundu - Ovchi Kalacha</name>
+      <description>A valid multilateral border crossing.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          69.6547794,40.1108349,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Torugart pass</name>
+      <description>Border crossing between Bishkek and Kashgar</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          75.415649,40.551374,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Karamyk, Jirigital - Daroot Korgan</name>
+      <description>Bilateral border crossing. Closed for foreigners. Was opened briefly during the unrest in Khorog in summer 2012. </description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          71.776428,39.45104,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kenbulun</name>
+      <description>Border crossing open to foreigners since 2022.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          75.14833,42.880933,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sartobe</name>
+      <description>Border crossing open to foreigners since 2022.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          75.285686,42.857677,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Alatau</name>
+      <description>A hiking path from Almaty to Lake Issyk-Kul. There is no passport control at this border. Currently forbidden to take this beautiful route.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          77.01416,42.966472,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sarakhs - Saraghs</name>
+      <description>Border crossing between Turkmenistan and Iran.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.1670672,36.5199893,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bajgiran - Gaudan</name>
+      <description>Border crossing between Iran and Turkmenistan. </description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          58.41156,37.627284,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gudurolom - Incheboron</name>
+      <description>Border crossing between Iran and Turkmenistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          54.6194575,37.4461555,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Astara - Astara</name>
+      <description>Border crossing between Azerbaijan and Iran</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          48.871307,38.44606,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Nordooz - Agarak</name>
+      <description>Open for international travelers</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          46.203346,38.853478,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jolfa - Julfa - Culfa</name>
+      <description>Open for international travelers.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          45.635147,38.943389,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bilasuvar - Ardabil</name>
+      <description>Border crossing between Iran and Azerbaijan</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          48.3611302,39.3897084,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gurbulak - Bazargan</name>
+      <description>Border crossing between Turkey and Iran</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.377899,39.411794,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Esendere - Sero</name>
+      <description>Border crossing between Turkey and Iran</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.622259,37.716689,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kapikoy - Razi</name>
+      <description>Border crossing between Turkey and Iran</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.321079,38.497534,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Piranshahr - Haji Omran</name>
+      <description>Border crossing between Iraqi Kurdistan and Iran</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          45.068665,36.667317,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khosravi</name>
+      <description>Border crossing between Iran and Iraq</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          45.467606,34.383963,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mehran</name>
+      <description>Border crossing between Iran and Iraq</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          46.051812,33.122349,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mirjaveh - Taftan</name>
+      <description>Border crossing between Iran and Pakistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.550045,28.97736,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mand / Pishin</name>
+      <description>Open for all passport holders, but only on foot, maybe by bicycle</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          61.846504,26.094713,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Iran-Pakistan barrier</name>
+      <description>http://en.wikipedia.org/wiki/Iran-Pakistan_barrier</description>
+      <styleUrl>#line-CC0000-5000</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          61.556396,28.950476,0
+          61.885986,28.565225,0
+          62.479248,28.401065,0
+          62.556152,28.246328,0
+          62.797852,28.265682,0
+          62.753906,28.042895,0
+          62.852783,27.469287,0
+          62.786865,27.352253,0
+          62.808838,27.244863,0
+          63.182373,27.225326,0
+          63.336182,27.147145,0
+          63.193359,26.68673,0
+          62.325439,26.519735,0
+          62.237549,26.283565,0
+          62.138672,26.276177,0
+          62.039795,26.315575,0
+          61.943665,26.261399,0
+          61.880493,26.221983,0
+          61.847534,26.111053,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Gyumri / Akyaka</name>
+      <description>Meetings have been held, agreements have been signed, but until further notice, this border is still closed. Very, very closed.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          43.746185,40.729568,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bavra - Ninotsminda</name>
+      <description>Open for international travelers</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          43.794079,41.138718,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gogavan - Guguti</name>
+      <description>Open for international travelers</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.321251,41.207944,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sadakhlo / Baghratashen</name>
+      <description>Main road between Tblisi and Yerevan</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.834003,41.229346,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Qazax - Sofulu</name>
+      <description>This border crossing is closed.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          45.2383945,41.0118677,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sarpi</name>
+      <styleUrl>#icon-62-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          41.547546,41.52066,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Poti port</name>
+      <description>Ferry port open to foreigners</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          41.671143,42.147114,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Batumi port</name>
+      <styleUrl>#icon-62-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          41.64711,41.648801,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Psou</name>
+      <description>Open for international travelers, on the condition they enter and exit from the same border.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          40.008087,43.395568,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Enguri</name>
+      <description>Open for international travelers, on the condition they enter and exit from the same border. Closes frequently whenever tensions with Russia run high: check our forum for the latest updates</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          41.8507,42.582916,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zemo Larsi / Verkhnij Lars</name>
+      <description>Open for foreigners</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.620972,42.747012,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Nizhniy Zermag - Zemo Roka</name>
+      <description>Open for international travelers, if you manage to get permission to enter.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          44.099121,42.608695,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mamisoni pass</name>
+      <description>Closed.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          43.786011,42.690511,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mosabruni</name>
+      <styleUrl>#icon-124-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          44.489222,42.100961,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Artsevi</name>
+      <description>Closed for international travelers, although bribing yourself in seems possible.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          44.000244,42.190882,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sinagur</name>
+      <styleUrl>#icon-124-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          43.628426,42.394812,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tsiteli/Red Bridge - Shikhli/Sixli</name>
+      <description>Border crossing between Georgia and Azerbaijan</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          45.071411,41.328358,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gardaban</name>
+      <description>Railway crossing between Georgia and Azerbaijan.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          45.169601,41.406171,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Lagodeki / Balakan</name>
+      <styleUrl>#icon-158-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          46.312866,41.795888,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Samur</name>
+      <description>Border crossing between Russia and Azerbaijan.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          48.417778,41.637384,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Yalama - Tagirkent-Kazmalyar</name>
+      <description>Rail and road crossing between Azerbaijan and Russia.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          48.555794,41.781489,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>South Ossetia borders </name>
+      <description><![CDATA[Approximate South Ossetian borders with Georgia. Often lying in the middle of towns and fields and still changing, they are illegal to cross.<br>http://en.wikipedia.org/wiki/South_Ossetia]]></description>
+      <styleUrl>#line-CC0000-5000</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          43.796997,42.743987,0
+          43.611603,42.5905,0
+          43.617096,42.395066,0
+          43.628082,42.326062,0
+          43.669281,42.317939,0
+          43.676147,42.285437,0
+          43.615723,42.185794,0
+          43.769531,42.184776,0
+          43.884888,42.177653,0
+          44.01123,42.200038,0
+          44.181519,42.073762,0
+          44.494629,42.103317,0
+          44.609985,42.309815,0
+          44.24057,42.630928,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Sokh enclave</name>
+      <description>Sokh enclave is a piece of Uzbekistan in Kyrgyzstan. If you take the southern Osh-Batken road, you will need an Uzbek visa and a double entry Kyrgyz visa.</description>
+      <styleUrl>#line-FF0000-5000</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          70.999146,40.18307,0
+          71.022491,40.041284,0
+          71.111755,39.965543,0
+          71.054077,39.901309,0
+          71.099396,39.89288,0
+          71.118622,39.916056,0
+          71.135101,39.876019,0
+          71.229858,39.916056,0
+          71.162567,39.998164,0
+          71.206512,40.039181,0
+          71.126862,40.025511,0
+          71.06369,40.18307,0
+          70.999146,40.18307,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Oybek-Buston</name>
+      <description>Multilateral border crossing between Uzbekistan and Tajikistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          69.216292,40.546434,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ruzvai - Nusai Viloyati</name>
+      <description>Bridge over the Pyanj river connecting Afghanistan with Tajikistan. </description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          70.827484,38.4532529,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tem - Demogan</name>
+      <description>Crossing between Tajikistan and Afghanistan. </description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          71.503551,37.528268,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Wakhjir pass</name>
+      <description><![CDATA[The last foreigner to cross here was probably somewhere in the 1940's.]]></description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          74.484901,37.097223,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Torkham (Khyber pass)</name>
+      <description>Border crossing between Afghanistan and Pakistan. </description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          71.093731,34.122179,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Angoor Ada - Shkin</name>
+      <description>Border crossing between Afghanistan and Pakistan.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          69.272189,32.519478,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Broghol (Baroghil) pass</name>
+      <description>Border crossing between Afghanistan and Pakistan.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          73.347881,36.886125,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dorah pass</name>
+      <description>Border crossing between Afghanistan and Pakistan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          71.243473,36.113636,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gulam Khan</name>
+      <description>Border crossing between Pakistan and Afghanistan.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          70.029602,33.1502,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gumal pass</name>
+      <description>Border crossing between Afghanistan and Pakistan.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          69.300041,31.91851,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Peiwar Kotal pass</name>
+      <description>Border crossing between Afghanistan and Pakistan.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          69.872875,33.969559,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Imam Nazar</name>
+      <description>Border crossing between Afghanistan and Turkmenistan.</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          65.268697,37.232793,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Wagah border</name>
+      <description>Lahore - Amritsar border. The only road border between Pakistan and India.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          74.573479,31.603978,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Munabao / Khokraparand </name>
+      <description>Train border crossing. Service is random and not guaranteed.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          70.258512,25.731792,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Wagah border</name>
+      <description>Only road border between India and Pakistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          74.574509,31.604709,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Munabao / Khokraparand</name>
+      <description>Train border crossing between Pakistan and India.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          70.258598,25.731792,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dayan Hunshanjin</name>
+      <description>Bilateral and seasonal border crossing, only open to Chinese and Mongol passport holders.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          88.941193,48.093216,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bulgan Takashiken </name>
+      <description>Border crossing between Mongolia and China.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          90.994263,46.141783,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Baitag Uliastai </name>
+      <description>Bilateral border crossing, open only to Chinese and Mongols.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          91.429939,45.155653,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Burgastai Lao-Myao</name>
+      <description>Border crossing only open for freight.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          94.101334,44.71039,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sheveekhuren Sekhee</name>
+      <description>Border crossing only open for freight.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          101.280212,42.583928,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Hangi‐Mandal</name>
+      <description>Temporary bilateral border crossing. Only open to Mongols and Chinese.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          109.986877,42.636484,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zamiin-Uud / Erlian </name>
+      <description>Border crossing by train and road between Mongolia and China.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          111.943817,43.690715,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bichigt</name>
+      <description>Border crossing only open for freight.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          116.227798,45.749798,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bayan-Hushuu Uvdug</name>
+      <description>Bilateral border crossing, open only to Chinese and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          118.181133,48.038496,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Havirga - Ar-Khunshuut</name>
+      <description>Bilateral border crossing between China and Mongolia.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          115.858383,48.594776,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Manzhouli</name>
+      <description>Border crossing between China and Russia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          117.373466,49.628504,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ereentsav Solovevsk</name>
+      <description>Border crossing between Russia and Mongolia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          115.734787,49.885344,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Deed-Ulikhan</name>
+      <description>Bilateral border crossing. Only open to Mongolians and Russians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          114.33609,50.283197,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Agatsiin Gol-Altan</name>
+      <description>Bilateral border crossing. Only open to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          111.251335,49.302964,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Balij</name>
+      <description>Bilateral border crossing. Open only for Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          110.409164,49.236935,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Minj Gol</name>
+      <description>Bilateral border crossing, only open to Russians and Mongolians. Pedestrians only?</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          108.650622,49.339385,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Huder-Tsagaanchuluut </name>
+      <description>Bilateral border crossing, open only to Russians and Mongolians. Pedestrian only?</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          107.306814,50.000236,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Altanbulag / Kyakhta </name>
+      <description>Road border crossing between Russia and Mongolia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          106.489105,50.323108,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sukhbaatar Naushki</name>
+      <description>Train border crossing between Russia and Mongolia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          106.095335,50.334272,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tushig Zheltura </name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          105.062771,50.388507,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ainek-gol Baga-ilenkh</name>
+      <description>Bilateral border crossing, only open to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          102.82804,50.355182,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khankh Mondy </name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          100.857239,51.633362,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tsagaanuur Tashanta</name>
+      <description>Border crossing between Russia and Mongolia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          89.438324,49.645402,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mohmoron Gol</name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          90.008926,49.986552,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mugur-Aqsa - Harig-gol </name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          90.725784,50.231395,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khangait Borshoo </name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          92.067833,50.696893,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Border crossing?</name>
+      <description>If so, only bilateral.</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          92.31657,50.761002,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Saryg Alak</name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          92.465229,50.790419,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shar-suuri Shar-Uzuur</name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          94.321404,50.513863,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tsagaan-tolgoi Artsuuri</name>
+      <description>Bilateral border crossing. Open only to Russians and Mongolians.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          95.529556,49.899058,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Border crossing?</name>
+      <description>If so, only bilateral.</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          98.943558,52.146973,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Border crossing?</name>
+      <description>If so, only bilateral</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          102.212334,50.874661,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Posof border</name>
+      <description>Open border between Kars, Turkey and the hinterland of Adjaria in Georgia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          42.8184843,41.5877155,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cildir/Aktas - Kartsakhi</name>
+      <description>Border corssing between Turkey and Georgia.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          43.2010746,41.2350912,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Poldasht-Shahtakhti</name>
+      <description>Border crossing between Nakhchivan and Iran</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          45.0708961,39.3593871,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sadarak</name>
+      <description>Border crossing between Nakchivan and Turkey</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          44.8031044,39.6552666,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Horadiz</name>
+      <description>Closed border crossing</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          47.3462677,39.4399051,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bashmakh - Penjwen</name>
+      <description>Border crossing between Iraqi Kurdistan and Iran</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          46.0176086,35.6104179,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shalamcheh</name>
+      <description>border crossing between Iran and Iraq</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          48.0265617,30.5050402,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chakan Da Bagh</name>
+      <description>Border crossing on the Line of Control</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          74.0071678,33.7543705,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Uri</name>
+      <description>Border crossing on the line of control</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          73.9064026,34.1049822,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ganda Singh Wala - Hussainiwala</name>
+      <description>Border crossing between Pakistan and India</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          74.5405197,31.0055686,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Talimardzhan</name>
+      <description>Bilateral border crossing between Uzbekistan and Turkmenistan.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          65.4668427,38.3408484,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khunjerab pass</name>
+      <description>Border crossing between China and Pakistan on the Karakorum highway. </description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          75.428009,36.8466587,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Izboskan - Manyet</name>
+      <description>Open for pedestrians and cyclists, but not for cars and motorbikes.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          72.3244786,41.0448737,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Madaniyat</name>
+      <description>Bilateral crossing.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          69.55124,40.09901,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kupruki Vanch - Jomarji Bolo</name>
+      <description>Bridge over river Panj. </description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          71.3311392,38.2826779,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kokul - Ai Khanoum</name>
+      <description>Border crossing between Afghanistan and Tajikistan.</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          69.4230366,37.2006633,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Lotfabad - Artyk</name>
+      <styleUrl>#icon-62-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          59.333725,37.5301486,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bilateral border crossing</name>
+      <styleUrl>#icon-163-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          87.3141861,49.2311626,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Qushkent</name>
+      <description>Border crossing between Uzbekistan and Tajikistan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          68.9458179,40.0646724,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Uchturgan</name>
+      <description>Border crossing between Uzbekistan and Tajikistan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          68.8157845,40.1158897,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Khavastabad</name>
+      <description>Border crossing between Uzbekistan and Tajikistan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          68.8581848,40.211392,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pulgon</name>
+      <description>Bilateral border crossing, although it seems Russians are also allowed to cross. Other foreigners definitely not.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          71.7308736,40.1471017,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shirvanovka - Filya</name>
+      <description>Multilateral border crossing between Quba and Derbent.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          48.4751558,41.7075868,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Garax-Zukhul</name>
+      <description>Bilateral border crossing between Russia and Azerbaijan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          48.0656147,41.4898063,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Serke-Turkistan (Kazygurt)</name>
+      <description>A multilateral border crossing between Uzbekistan and Kazakhstan</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          69.4095612,41.5227805,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mahirood - Abu Nasr Farahi</name>
+      <description>Border crossing between Birjand and Farah</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          60.8656,32.16266,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Parviz Khan</name>
+      <description>International border crossing between Iran and Iraqi Kurdistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          45.59069,34.55582,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chazabeh</name>
+      <description>Border crossing between Iraq and Iran</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          47.80207,31.85364,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Soomar - Mandali</name>
+      <description>Border crossing between Iran and Iraq</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          45.60672,33.80052,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kolzhat/Dulat</name>
+      <description>Border crossing between Kazakhstan and China.</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          80.620422,43.671845,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sumber </name>
+      <description>Summer-only border crossing between China and Mongolia.</description>
+      <styleUrl>#icon-158</styleUrl>
+      <Point>
+        <coordinates>
+          119.4776589,47.3286044,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gabd - Rimdan </name>
+      <description>Border crossing between Iran and Pakistan.</description>
+      <styleUrl>#icon-62</styleUrl>
+      <Point>
+        <coordinates>
+          61.6577525,25.3802309,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shohon - Kokhon</name>
+      <description>Border crossing between Tajikistan and Afghanistan</description>
+      <styleUrl>#icon-124</styleUrl>
+      <Point>
+        <coordinates>
+          70.2297175,37.9381542,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pap - Novbunyod</name>
+      <description>Border crossing between Tajikistan and Uzbekistan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          70.7828522,40.7415345,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kizil-Kiya</name>
+      <description>Bilateral border crossing between Uzbekistan and Kyrgyzstan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          72.0450478,40.2754992,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Surkh - Khoja Alo</name>
+      <styleUrl>#icon-124-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          70.6186056,40.0017921,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Rishton</name>
+      <description>Bilateral border crossing between Uzbekistan and Kyrgyzstan</description>
+      <styleUrl>#icon-163</styleUrl>
+      <Point>
+        <coordinates>
+          71.2705806,40.3391426,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mil 73</name>
+      <description>No details</description>
+      <styleUrl>#icon-102</styleUrl>
+      <Point>
+        <coordinates>
+          60.6093266,33.0681085,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
