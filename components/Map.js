@@ -43,7 +43,7 @@ const ClientSideMap = ({ countriesData }) => {
     fetchBorderCrossings();
   }, []);
 
-  // Add custom CSS for tooltips
+  // Add custom CSS for tooltips and emoji icons
   useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `
@@ -57,6 +57,13 @@ const ClientSideMap = ({ countriesData }) => {
         width: 100%;
         border-radius: 4px;
       }
+      .emoji-icon {
+        font-size: 18px;
+        text-align: center;
+        line-height: 18px;
+        background: none;
+        border: none;
+      }
     `;
     document.head.appendChild(style);
 
@@ -65,6 +72,54 @@ const ClientSideMap = ({ countriesData }) => {
       document.head.removeChild(style);
     };
   }, []);
+
+  // Function to get emoji based on styleUrl
+  const getBorderCrossingEmoji = (styleUrl) => {
+    if (!styleUrl) return "❓"; // Default emoji
+
+    // Extract the style ID from the styleUrl (e.g., "#icon-62" -> "icon-62")
+    const styleId = styleUrl.startsWith("#") ? styleUrl.substring(1) : styleUrl;
+
+    // Map different style IDs to different emojis
+    const emojiMap = {
+      "icon-62": "✅", // Open border
+      "icon-15": "🚧", // Possible problems
+      "icon-124": "❌", // Closed border
+      "icon-163": "❓", // Unknown
+      "icon-22": "🎌", // Bilateral border crossing
+    };
+
+    return emojiMap[styleId] || "🚧"; // Return mapped emoji or default
+  };
+
+  // Function to get human-readable status text from styleUrl
+  const getBorderStatusText = (styleUrl) => {
+    if (!styleUrl) return "Unknown";
+
+    const styleId = styleUrl.startsWith("#") ? styleUrl.substring(1) : styleUrl;
+
+    const statusMap = {
+      "icon-62": "Border Checkpoint",
+      "icon-1899": "Open Border",
+      "icon-1644": "Closed Border",
+      "icon-1602": "Restricted Access",
+      "icon-1535": "Limited Hours",
+      // Add more mappings as needed
+    };
+
+    return statusMap[styleId] || "Border Checkpoint";
+  };
+
+  // Create a custom icon for border crossings using emoji
+  const createBorderCrossingIcon = (styleUrl) => {
+    return L.divIcon({
+      html: getBorderCrossingEmoji(styleUrl),
+      className: "emoji-icon",
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+      popupAnchor: [0, -9],
+    });
+  };
 
   // Style function for the GeoJSON layer
   const countryStyle = (feature) => {
@@ -223,17 +278,6 @@ const ClientSideMap = ({ countriesData }) => {
     });
   };
 
-  // Create a custom icon for border crossings
-  const borderCrossingIcon = new L.Icon({
-    iconUrl: "/border-crossing-icon.svg",
-    iconSize: [24, 24],
-    iconAnchor: [12, 12],
-    popupAnchor: [0, -12],
-  });
-
-  // Fallback icon if the custom one fails to load
-  const defaultIcon = new L.Icon.Default();
-
   return (
     <>
       <MapContainer
@@ -257,13 +301,7 @@ const ClientSideMap = ({ countriesData }) => {
           <Marker
             key={`crossing-${index}`}
             position={crossing.position}
-            icon={borderCrossingIcon}
-            eventHandlers={{
-              error: (e) => {
-                console.log("Error loading icon, using default");
-                e.target.setIcon(defaultIcon);
-              },
-            }}
+            icon={createBorderCrossingIcon(crossing.properties?.styleUrl)}
           >
             <Popup>
               <div>
@@ -273,7 +311,7 @@ const ClientSideMap = ({ countriesData }) => {
                 />
                 {crossing.properties && crossing.properties.styleUrl && (
                   <p className="text-sm text-gray-600 mt-2">
-                    Style: {crossing.properties.styleUrl}
+                    Status: {getBorderStatusText(crossing.properties.styleUrl)}
                   </p>
                 )}
               </div>

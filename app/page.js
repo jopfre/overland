@@ -34,14 +34,14 @@ const countries = [
 ];
 
 async function getData(countrySlug) {
-  console.log(`🔍 Attempting to fetch data for ${countrySlug}...`);
+  // console.log(`🔍 Attempting to fetch data for ${countrySlug}...`);
 
   // Try to get from cache first
   const cacheKey = `travel-advice-${countrySlug}`;
   const cachedData = getFromCache(cacheKey);
 
   if (cachedData) {
-    console.log(`✅ Using cached data for ${countrySlug}`);
+    // console.log(`✅ Using cached data for ${countrySlug}`);
     return cachedData;
   }
 
@@ -58,7 +58,7 @@ async function getData(countrySlug) {
     // Check cache status
     const cacheStatus = res.headers.get("x-vercel-cache") || "unknown";
     const isCached = cacheStatus === "HIT";
-    console.log(`📦 API Cache ${isCached ? "HIT" : "MISS"} for ${countrySlug}`);
+    // console.log(`📦 API Cache ${isCached ? "HIT" : "MISS"} for ${countrySlug}`);
 
     if (!res.ok) {
       console.log(`❌ No data found for ${countrySlug} (${res.status})`);
@@ -71,7 +71,7 @@ async function getData(countrySlug) {
     // Save to our file cache
     saveToCache(cacheKey, data);
 
-    console.log(`✅ Successfully fetched data for ${countrySlug}`);
+    // console.log(`✅ Successfully fetched data for ${countrySlug}`);
     return data;
   } catch (error) {
     console.error(`Error fetching data for ${countrySlug}:`, error);

@@ -4,10 +4,26 @@ import * as tj from "@mapbox/togeojson";
 
 export async function GET() {
   try {
+    console.log("Border crossings API called at:", new Date().toISOString());
+
     const kmlUrl =
       "https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=1Ml8xrhk9Jwr00_GdccYtBrEYScU&lid=z0rmBFooQBOI.klH5gTa0AB_k";
+
+    console.log("Fetching KML data from URL:", kmlUrl);
+    const fetchStart = performance.now();
     const response = await fetch(kmlUrl, { next: { revalidate: 86400 } }); // Cache for 24 hours
+    const fetchEnd = performance.now();
+
+    console.log(
+      `KML fetch completed in ${(fetchEnd - fetchStart).toFixed(
+        2
+      )}ms, cache status: ${
+        response.headers.get("x-vercel-cache") || "unknown"
+      }`
+    );
+
     const kmlText = await response.text();
+    console.log(`KML data size: ${(kmlText.length / 1024).toFixed(2)} KB`);
 
     // Parse the KML using xmldom for server-side parsing
     const parser = new DOMParser();
@@ -20,6 +36,9 @@ export async function GET() {
     const crossings = [];
 
     if (geojson.features) {
+      console.log(
+        `Processing ${geojson.features.length} features from GeoJSON`
+      );
       geojson.features.forEach((feature) => {
         if (feature.geometry && feature.geometry.type === "Point") {
           // GeoJSON coordinates are [longitude, latitude]
@@ -35,6 +54,7 @@ export async function GET() {
       });
     }
 
+    console.log(`Returning ${crossings.length} border crossings`);
     return NextResponse.json({ crossings });
   } catch (error) {
     console.error("Error fetching border crossings:", error);

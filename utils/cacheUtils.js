@@ -23,10 +23,10 @@ export function getFromCache(key) {
 
       // Check if cache is still valid
       if (Date.now() - cacheData.timestamp < ONE_DAY_MS) {
-        console.log(`🔍 Cache HIT for ${key}`);
+        // console.log(`🔍 Cache HIT for ${key}`);
         return cacheData.data;
       } else {
-        console.log(`🔍 Cache EXPIRED for ${key}`);
+        // console.log(`🔍 Cache EXPIRED for ${key}`);
       }
     }
   } catch (error) {
