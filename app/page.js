@@ -1,10 +1,6 @@
-import Map from "@/components/MapSvg/MapSvg";
-import Leaflet from "@/components/Leaflet";
-import {
-  getCountryNames,
-  getCountryNamesByCode,
-} from "@/utils/extractCountryNames";
+import { getCountryNamesByCode } from "@/utils/extractCountryNames";
 import { getFromCache, saveToCache } from "@/utils/cacheUtils";
+import LeafletMap from "@/components/Map";
 
 const countries = [
   "MN",
@@ -109,7 +105,7 @@ export default async function Home() {
 
   return (
     <main className="">
-      <Leaflet countriesData={validCountriesData} />
+      <LeafletMap countriesData={validCountriesData} />
     </main>
   );
 }
