@@ -1,5 +1,5 @@
 "use client";
-import { countryOutlines } from "./countryOutlines";
+import { countryOutlines } from "../utils/countryOutlines";
 import { countryCodes } from "@/utils/codes";
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, GeoJSON, useMap } from "react-leaflet";
