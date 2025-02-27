@@ -31,12 +31,8 @@ export default function MapLegend() {
                 <span>Avoid all but essential travel</span>
               </div>
               <div className="flex items-center mb-1">
-                <span className="inline-block w-5 h-5 bg-[#FF6347] mr-1.5"></span>
-                <span>Avoid all travel to parts</span>
-              </div>
-              <div className="flex items-center mb-1">
                 <span className="inline-block w-5 h-5 bg-[#FFD700] mr-1.5"></span>
-                <span>Avoid all but essential travel to parts</span>
+                <span>Avoid travel to parts</span>
               </div>
               <div className="flex items-center mb-1">
                 <span className="inline-block w-5 h-5 bg-[#00FF00] mr-1.5"></span>

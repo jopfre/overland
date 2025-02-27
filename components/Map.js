@@ -31,6 +31,14 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
     style.innerHTML = `
       .country-tooltip {
         width: 320px;
+        max-width: 320px;
+        width: max-content;
+        white-space: normal;
+      }
+      .country-tooltip .leaflet-tooltip-content {
+        word-wrap: break-word;
+        white-space: normal;
+        overflow-wrap: break-word;
       }
       .country-tooltip img {
         display: block;
@@ -149,19 +157,94 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
       // Start building tooltip content
       tooltipContent = `<strong>${countryName}</strong>`;
 
-      // Add status information
+      // Add status information only when there are warnings
       if (countryData.data.details && countryData.data.details.alert_status) {
         const alertStatus = countryData.data.details.alert_status;
         if (alertStatus.length > 0) {
-          tooltipContent += `<br/>${alertStatus
+          const alertText = alertStatus
             .join(", ")
             .replace(/_/g, " ")
-            .replace(/^\w/, (c) => c.toUpperCase())}`;
-        } else {
-          tooltipContent += `<br/>No travel warnings`;
+            .replace(/^\w/, (c) => c.toUpperCase());
+
+          // Determine color based on severity
+          let bgColor = "#FFF3CD"; // Default yellow warning color
+          let textColor = "#856404";
+          let icon = "⚠️";
+
+          // Check for severe warnings - only "avoid all travel to whole country" gets the most severe styling
+          if (
+            alertText
+              .toLowerCase()
+              .includes("avoid all travel to whole country")
+          ) {
+            bgColor = "#F8D7DA";
+            textColor = "#721C24";
+            icon = "🚫";
+          }
+
+          tooltipContent += `<div style="margin-top: 5px; padding: 5px; background-color: ${bgColor}; color: ${textColor}; border-radius: 4px; font-weight: bold;">${icon} ${alertText}</div>`;
         }
-      } else {
-        tooltipContent += `<br/>No travel warnings`;
+      }
+
+      // Add image if available and not "avoid all travel to whole country"
+      const hasAvoidAllTravel = countryData.data.details?.alert_status?.some(
+        (status) =>
+          status.toLowerCase().includes("avoid_all_travel_to_whole_country")
+      );
+
+      if (
+        !hasAvoidAllTravel &&
+        countryData.data.details &&
+        countryData.data.details.image &&
+        countryData.data.details.image.url
+      ) {
+        tooltipContent += `<img style="margin-top: 5px; display:block;" src="${countryData.data.details.image.url}" 
+            alt="${countryName}" />`;
+      }
+
+      // Add visa requirements information
+      if (
+        countryData.data.details &&
+        countryData.data.details.parts &&
+        Array.isArray(countryData.data.details.parts)
+      ) {
+        // Find entry requirements section
+        const entryRequirements = countryData.data.details.parts.find(
+          (part) => part.slug === "entry-requirements"
+        );
+
+        // Extract visa information if available
+        if (entryRequirements && entryRequirements.body) {
+          // Look for visa-requirements section with a more flexible pattern
+          const visaSection = entryRequirements.body.match(
+            /<h2[^>]*visa-requirements[^>]*>.*?<\/h2>([\s\S]*?)(?=<h2|$)/i
+          );
+
+          if (visaSection && visaSection[1]) {
+            // Extract the content between visa-requirements h2 and the next h2
+            let visaContent = visaSection[1].trim();
+
+            // Clean up the content (remove HTML tags and limit length)
+            visaContent = visaContent
+              .replace(/<[^>]*>/g, "") // Remove HTML tags
+              .replace(/\s+/g, " ") // Normalize whitespace
+              .trim();
+
+            // Limit to a reasonable length (first 200 characters)
+            if (visaContent.length > 200) {
+              const lastPeriod = visaContent.substring(0, 200).lastIndexOf(".");
+              if (lastPeriod !== -1) {
+                visaContent = visaContent.substring(0, lastPeriod + 1);
+              } else {
+                visaContent = visaContent.substring(0, 197) + "...";
+              }
+            }
+
+            if (visaContent) {
+              tooltipContent += `<div style="margin-top: 5px; padding: 5px; background-color: #E2F0FF; color: #0066CC; border-radius: 4px;">🛂 ${visaContent}</div>`;
+            }
+          }
+        }
       }
 
       // Check for organized tour requirement
@@ -181,18 +264,8 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
           entryRequirements.body &&
           entryRequirements.body.toLowerCase().includes("organised tour")
         ) {
-          tooltipContent += `<br/><div style="margin-top: 5px; padding: 5px; background-color: #FFF3CD; color: #856404; border-radius: 4px; font-weight: bold;">⚠️ Organized tour required</div>`;
+          tooltipContent += `<div style="margin-top: 5px; padding: 5px; background-color: #FFF3CD; color: #856404; border-radius: 4px; font-weight: bold;">⚠️ Organized tour required</div>`;
         }
-      }
-
-      // Add image if available
-      if (
-        countryData.data.details &&
-        countryData.data.details.image &&
-        countryData.data.details.image.url
-      ) {
-        tooltipContent += `<br/><img src="${countryData.data.details.image.url}" 
-          alt="${countryName}" />`;
       }
     }
 

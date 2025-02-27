@@ -51,27 +51,25 @@ export function getCountryNamesByCode() {
  * @returns {string} Color code for the alert status
  */
 export function getAlertStatusColor(alertStatus) {
-  if (!alertStatus || alertStatus.length === 0) {
-    return "#00FF00"; // Green for empty array (no warnings)
+  if (!alertStatus || !Array.isArray(alertStatus) || alertStatus.length === 0) {
+    return "#00FF00"; // Green for no warnings
   }
 
-  // Check for the most severe alert in the array
+  // Check for the most severe warning first
   if (alertStatus.includes("avoid_all_travel_to_whole_country")) {
     return "#FF0000"; // Red for avoid all travel
-  } else if (
-    alertStatus.includes("avoid_all_but_essential_travel_to_whole_country")
-  ) {
+  }
+
+  if (alertStatus.includes("avoid_all_but_essential_travel_to_whole_country")) {
     return "#FFA500"; // Orange for avoid all but essential travel
-  } else if (
-    alertStatus.some((status) => status.includes("avoid_all_travel_to_parts"))
+  }
+
+  // Both "parts" warnings now use the same yellow color
+  if (
+    alertStatus.includes("avoid_all_travel_to_parts") ||
+    alertStatus.includes("avoid_all_but_essential_travel_to_parts")
   ) {
-    return "#FF6347"; // Tomato for avoid all travel to parts
-  } else if (
-    alertStatus.some((status) =>
-      status.includes("avoid_all_but_essential_travel_to_parts")
-    )
-  ) {
-    return "#FFD700"; // Gold for avoid all but essential travel to parts
+    return "#FFD700"; // Yellow for both types of partial warnings
   }
 
   return "#00FF00"; // Green for no specific warnings
