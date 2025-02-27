@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function MapLegend() {
+  // Initialize state from localStorage or default to true if not found
   const [isExpanded, setIsExpanded] = useState(true);
 
+  // Load the saved state from localStorage on component mount
+  useEffect(() => {
+    const savedState = localStorage.getItem("mapLegendExpanded");
+    if (savedState !== null) {
+      setIsExpanded(savedState === "true");
+    }
+  }, []);
+
   const toggleLegend = () => {
-    setIsExpanded(!isExpanded);
+    const newState = !isExpanded;
+    setIsExpanded(newState);
+    // Save the new state to localStorage
+    localStorage.setItem("mapLegendExpanded", newState.toString());
   };
 
   return (
