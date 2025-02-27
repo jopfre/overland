@@ -48,7 +48,7 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
         border-radius: 4px;
       }
       .emoji-icon {
-        font-size: 18px;
+        font-size: 16px;
         text-align: center;
         line-height: 18px;
         background: none;
@@ -79,7 +79,7 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
       "icon-22": "🎌", // Bilateral border crossing
     };
 
-    return emojiMap[styleId] || "🚧"; // Return mapped emoji or default
+    return emojiMap[styleId] || "❓"; // Return mapped emoji or default
   };
 
   // Function to get human-readable status text from styleUrl
@@ -104,7 +104,7 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
     return L.divIcon({
       html: getBorderCrossingEmoji(styleUrl),
       className: "emoji-icon",
-      iconSize: [18, 18],
+      iconSize: [14, 14],
       iconAnchor: [9, 9],
       popupAnchor: [0, -9],
     });
