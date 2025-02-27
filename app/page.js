@@ -104,6 +104,27 @@ async function getData(countrySlug) {
   }
 }
 
+// New function to fetch border crossings
+async function getBorderCrossings() {
+  try {
+    // Use relative URL if calling internal API route
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL || ""}/api/border-crossings`
+    );
+    const data = await response.json();
+
+    if (data.crossings) {
+      return data.crossings;
+    } else {
+      console.error("No crossings data returned from API");
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching border crossings:", error);
+    return [];
+  }
+}
+
 export default async function Home() {
   const countryNamesByCode = getCountryNamesByCode();
 
@@ -123,6 +144,9 @@ export default async function Home() {
     })
   );
 
+  // Fetch border crossings data
+  const borderCrossings = await getBorderCrossings();
+
   console.log(countriesData.find((c) => c?.code === "IR"));
 
   // Filter out any null responses
@@ -131,7 +155,10 @@ export default async function Home() {
   console.log(validCountriesData.find((c) => c?.code === "TR"));
   return (
     <main className="">
-      <LeafletMap countriesData={validCountriesData} />
+      <LeafletMap
+        countriesData={validCountriesData}
+        borderCrossings={borderCrossings}
+      />
     </main>
   );
 }

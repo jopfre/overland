@@ -1,7 +1,8 @@
 check if guide required
 
 open borders?
-https://travel.stackexchange.com/questions/12764/an-online-map-indicating-the-status-of-all-open-and-closed-international-borders
-https://caravanistan.com/border-crossings/
+https://www.google.co.uk/maps/search/Border+crossing+station/@21.4331224,100.0612921,7.55z?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D
+
+maybe can query google maps api for rating and ai parse reviews
 
 visa requirements

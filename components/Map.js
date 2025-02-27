@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { countryOutlines } from "../utils/countryOutlines";
 import { getAlertStatusColor } from "../utils/extractCountryNames";
@@ -11,7 +11,7 @@ import "leaflet/dist/leaflet.css";
 import MapLegend from "./MapLegend";
 
 // Create a client-side only version of the map
-const ClientSideMap = ({ countriesData }) => {
+const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
   // Import Leaflet components dynamically
   const {
     MapContainer,
@@ -21,27 +21,9 @@ const ClientSideMap = ({ countriesData }) => {
     Popup,
   } = require("react-leaflet");
   const L = require("leaflet");
-  const [borderCrossings, setBorderCrossings] = useState([]);
 
-  // Fetch border crossings from our API endpoint
-  useEffect(() => {
-    const fetchBorderCrossings = async () => {
-      try {
-        const response = await fetch("/api/border-crossings");
-        const data = await response.json();
-
-        if (data.crossings) {
-          setBorderCrossings(data.crossings);
-        } else {
-          console.error("No crossings data returned from API");
-        }
-      } catch (error) {
-        console.error("Error fetching border crossings:", error);
-      }
-    };
-
-    fetchBorderCrossings();
-  }, []);
+  // Removed useState and useEffect for fetching border crossings
+  // as we now receive them as props
 
   // Add custom CSS for tooltips and emoji icons
   useEffect(() => {
@@ -331,10 +313,16 @@ const DynamicMap = dynamic(() => Promise.resolve(ClientSideMap), {
 });
 
 // Main component that renders the dynamic map
-export default function LeafletMap({ countriesData = [] }) {
+export default function LeafletMap({
+  countriesData = [],
+  borderCrossings = [],
+}) {
   return (
     <div className="h-screen w-full">
-      <DynamicMap countriesData={countriesData} />
+      <DynamicMap
+        countriesData={countriesData}
+        borderCrossings={borderCrossings}
+      />
     </div>
   );
 }
