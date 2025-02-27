@@ -55,6 +55,16 @@ const countries = [
   "PS", // Palestine
   "CY", // Cyprus
   "EG", // Egypt
+
+  // Central American countries
+  "MX", // Mexico
+  "GT", // Guatemala
+  "BZ", // Belize
+  "SV", // El Salvador
+  "HN", // Honduras
+  "NI", // Nicaragua
+  "CR", // Costa Rica
+  "PA", // Panama
 ];
 
 async function getData(countrySlug) {
