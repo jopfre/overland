@@ -39,31 +39,22 @@ const countries = [
   "JP", // Japan
   "ID", // Indonesia
 
-  // "AA",
-  // "AB",
-  // "AC",
-  // "AD",
-  // "AE",
-  // "AF",
-  // "AG",
-  // "AH",
-  // "AI",
-  // "AJ",
-  // "AK",
-  // "AL",
-  // "AM",
-  // "AN",
-  // "AO",
-  // "AP",
-  // "AQ",
-  // "AR",
-  // "AS",
-  // "AT",
-  // "AU",
-  // "AV",
-  // "AW",
-  // "AX",
-  // "AY",
+  // Middle Eastern countries
+  "SA", // Saudi Arabia
+  "AE", // United Arab Emirates
+  "QA", // Qatar
+  "KW", // Kuwait
+  "BH", // Bahrain
+  "OM", // Oman
+  "YE", // Yemen
+  "IQ", // Iraq
+  "SY", // Syria
+  "JO", // Jordan
+  "LB", // Lebanon
+  "IL", // Israel
+  "PS", // Palestine
+  "CY", // Cyprus
+  "EG", // Egypt
 ];
 
 async function getData(countrySlug) {
