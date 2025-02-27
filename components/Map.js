@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { countryOutlines } from "../utils/countryOutlines";
 import { getAlertStatusColor } from "../utils/extractCountryNames";
@@ -11,7 +11,7 @@ import "leaflet/dist/leaflet.css";
 import MapLegend from "./MapLegend";
 
 // Create a client-side only version of the map
-const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
+const ClientSideMap = ({ countriesData }) => {
   // Import Leaflet components dynamically
   const {
     MapContainer,
@@ -22,8 +22,29 @@ const ClientSideMap = ({ countriesData, borderCrossings = [] }) => {
   } = require("react-leaflet");
   const L = require("leaflet");
 
-  // Removed useState and useEffect for fetching border crossings
-  // as we now receive them as props
+  const [borderCrossings, setBorderCrossings] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Fetch border crossings on the client side
+    async function fetchBorderCrossings() {
+      try {
+        const response = await fetch("/api/border-crossings");
+        if (!response.ok) {
+          console.error("Failed to fetch border crossings:", response.status);
+          return;
+        }
+        const data = await response.json();
+        setBorderCrossings(data.crossings || []);
+      } catch (error) {
+        console.error("Error fetching border crossings:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchBorderCrossings();
+  }, []);
 
   // Add custom CSS for tooltips and emoji icons
   useEffect(() => {
@@ -386,16 +407,10 @@ const DynamicMap = dynamic(() => Promise.resolve(ClientSideMap), {
 });
 
 // Main component that renders the dynamic map
-export default function LeafletMap({
-  countriesData = [],
-  borderCrossings = [],
-}) {
+export default function LeafletMap({ countriesData }) {
   return (
     <div className="h-screen w-full">
-      <DynamicMap
-        countriesData={countriesData}
-        borderCrossings={borderCrossings}
-      />
+      <DynamicMap countriesData={countriesData} />
     </div>
   );
 }

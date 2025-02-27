@@ -6,3 +6,8 @@ https://www.google.co.uk/maps/search/Border+crossing+station/@21.4331224,100.061
 maybe can query google maps api for rating and ai parse reviews
 
 visa requirements
+try to figure out if can apply for visa on arrival
+
+check mobile works as expected
+
+make it so it never queries apis - only generates files on build which we can then query directly and not through an api call
