@@ -31,6 +31,14 @@ const countries = [
   "TM",
   "UZ",
   "KG",
+  "LK", // Sri Lanka
+  "SG", // Singapore
+  "MY", // Malaysia
+  "PH", // Philippines
+  "PG", // Papua New Guinea
+  "JP", // Japan
+  "ID", // Indonesia
+
   // "AA",
   // "AB",
   // "AC",
