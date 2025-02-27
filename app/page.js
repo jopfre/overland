@@ -67,6 +67,11 @@ const countries = [
   "PA", // Panama
 ];
 
+// Country slug overrides for special cases
+const countrySlugOverrides = {
+  PS: "the-occupied-palestinian-territories", // Override for Palestine
+};
+
 async function getData(countrySlug) {
   // console.log(`🔍 Attempting to fetch data for ${countrySlug}...`);
 
@@ -122,11 +127,14 @@ export default async function Home() {
       const country = countryNamesByCode[code];
       if (!country) return null;
 
-      const data = await getData(country.slug);
+      // Use override slug if available, otherwise use the default slug
+      const slug = countrySlugOverrides[code] || country.slug;
+
+      const data = await getData(slug);
       return {
         code,
         name: country.original,
-        slug: country.slug,
+        slug, // Use the potentially overridden slug
         data,
       };
     })
